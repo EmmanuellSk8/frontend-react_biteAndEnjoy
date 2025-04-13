@@ -1,6 +1,8 @@
 import ImgHero from '../assets/imgHero.png';
 import postreHero from '../assets/postreHero.png';
 import Bg from '../assets/bg-imgs-hero.png';
+import { Link, Route, Routes } from 'react-router-dom';
+import ContainerReservation from './ContainerReservation';
 
 export default function Hero() {
 
@@ -27,13 +29,15 @@ export default function Hero() {
 
                         <div className="flex gap-4">
 
-                            <a href="#Menu" className="btns-hero menu mt-4 gap-1.5 flex font-extrabold bg-amber-100 w-fit text-black py-2 px-5 rounded-xl duration-300 ease-in-out items-center border-4 border-double">¡Ver menú!
+                            <a href="#Menu" className="btns-hero menu  cursor-pointer mt-4 gap-1.5 flex font-extrabold bg-amber-100 w-fit text-black py-2 px-5 rounded-xl duration-300 ease-in-out items-center border-4 border-double">¡Ver menú!
                                 <svg className='svg duration-200 ease-in-out' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
                             </a>
 
-                            <a href="#" className="btns-hero reservar mt-4 gap-1.5 flex font-extrabold bg-amber-100 w-fit text-black py-2 px-5 rounded-xl duration-300 ease-in-out items-center border-4 border-double">¡Reservar!
-                                <svg className='svg duration-200 ease-in-out' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
-                            </a>
+                            <Link to="/reservations">
+                                <button href="#" className="btns-hero reservar cursor-pointer mt-4 gap-1.5 flex font-extrabold bg-amber-100 w-fit text-black py-2 px-5 rounded-xl duration-300 ease-in-out items-center border-4 border-double">¡Reservar!
+                                    <svg className='svg duration-200 ease-in-out' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
+                                </button>
+                            </Link>
 
                         </div>
                     </div>
@@ -46,6 +50,11 @@ export default function Hero() {
                 </div>
 
             </section>
+
+
+            <Routes>
+                <Route path="/Reservations" element={<ContainerReservation />} />
+            </Routes>
         </>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Navigate, RouterProvider, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import ContainerHomePage from './components/ContainerHomePage';
 import ContainerReservation from './components/ContainerReservation';
@@ -17,9 +17,9 @@ function App() {
 
       {!isReservationsPath ? <Header /> : <ReservationHeader />}
 
-      {/* Todas las rutas en un solo lugar */}
       <Routes>
-        <Route path="/" element={<ContainerHomePage />} />
+      <Route path="/" element={<Navigate to ="/home"/>} />
+        <Route path="/home/*" element={<ContainerHomePage />} />
         <Route path="/Reservations/*" element={<ContainerReservation />} />
       </Routes>
     </section>

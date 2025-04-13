@@ -30,7 +30,7 @@ export default function HeaderReservation() {
                         <button className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Consultar reserva</button>
                     </Link>
 
-                    <Link to="/">
+                    <Link to="/home">
                         <button className="flex items-center gap-2 cursor-pointer hover:scale-105 duration-100 ease-in-out">
                             <img src={Logo} alt="Logo" className="w-12 h-12" />
                             <h1 className="text-2xl font-bold">Bite & Enjoy</h1>
@@ -54,7 +54,7 @@ export default function HeaderReservation() {
 
                     <div className="flex items-center gap-4 justify-between w-full">
 
-                        <Link to="/">
+                        <Link to="/home">
                         <button className="flex items-center gap-2 cursor-pointer hover:scale-105 duration-100 ease-in-out">
                             <img src={Logo} alt="Logo" className="w-12 h-12" />
                             <h1 className="text-2xl font-bold">Bite & Enjoy</h1>

@@ -24,7 +24,7 @@ export default function ContainerMenu() {
 
                         <div>
                             {isMenuVisible && (
-                                <Link to="/maxmenu">
+                                <Link to="/home/maxmenu">
                                     <button
                                         className=' bg-amber-600 flex py-2.5 px-5 rounded-xl text-amber-50 font-bold cursor-pointer hover:scale-110 duration-300 ease-in-out'
                                         onClick={toggleMenu}
@@ -35,7 +35,7 @@ export default function ContainerMenu() {
                             )}
 
                             {!isMenuVisible && (
-                                <Link to="/minmenu">
+                                <Link to="/home/minmenu">
                                     <button
                                         className='bg-amber-600 py-2.5 px-5 rounded-xl text-amber-50 font-bold cursor-pointer hover:scale-110 duration-300 ease-in-out'
                                         onClick={toggleMenu}
@@ -53,8 +53,8 @@ export default function ContainerMenu() {
 
                         <Routes>
                             <Route path="/" element={<PreMenu />} />
-                            <Route path="/minmenu" element={<PreMenu />} />
-                            <Route path="/maxmenu" element={<Menu />} />
+                            <Route path="minmenu" element={<PreMenu />} />
+                            <Route path="maxmenu" element={<Menu />} />
                         </Routes>
                     </div>
                 </div>

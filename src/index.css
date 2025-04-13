@@ -82,6 +82,18 @@ body {
   
 }
 
+#overlay{
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+#overlay.active{
+  display: block;
+}
 
 @media screen and (max-width: 1440px) {
   .headerReservation {
@@ -164,8 +176,7 @@ input {
 
 input:hover {
   box-shadow: 1px 1px 5px 1px rgb(11, 11, 11);
-  /* border: 2px orange solid; */
-  color: orange;
+
 }
 
 input[type="datetime-local"] {
