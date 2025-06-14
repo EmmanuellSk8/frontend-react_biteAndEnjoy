@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react"
+import "react-day-picker/style.css";
+import Calendar from "./Calendat";
 
 export default function DeleteReservation() {
     const id = "idDeprueba"
@@ -11,7 +13,7 @@ export default function DeleteReservation() {
         if (deleteModal.current) {
             deleteModal.current.showModal();
         }
-        
+
         if (overlay.current) {
             overlay.current.classList.add("active")
         }
@@ -38,18 +40,18 @@ export default function DeleteReservation() {
     useEffect(() => {
         const modalCurrent = deleteModal.current
         const confirmModalCurrent = confirmDeleteModal.current
-        
+
         if (modalCurrent && confirmModalCurrent) {
             modalCurrent.addEventListener("close", handleDialogClose);
             confirmModalCurrent.addEventListener("close", handleDialogClose);
-            
+
             return () => {
                 modalCurrent.removeEventListener("close", handleDialogClose);
                 confirmModalCurrent.removeEventListener("close", handleDialogClose);
             };
         }
     }, []);
-    
+
     const openConfirmModal = () => {
         if (confirmDeleteModal.current) {
             confirmDeleteModal.current.showModal();
@@ -70,7 +72,7 @@ export default function DeleteReservation() {
             overlay.current.classList.remove("active")
         }
     };
-
+    
     return (
         <>
             <section className="flex flex-col gap-10 mt-40 justify-around">
@@ -94,6 +96,8 @@ export default function DeleteReservation() {
                     </div>
                 </div>
             </section>
+
+            <Calendar/>
 
             <dialog
                 closedby="any"

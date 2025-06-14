@@ -183,6 +183,7 @@ input[type="datetime-local"] {
   color: orange;
   font-weight: 700;
   justify-content: space-between;
+  display: none;
 }
 
 input[type="datatime-local"]:hover {
