@@ -46,17 +46,15 @@ body {
   100% {
     transform: translateY(0);
   }
-
 }
 
-
 #menuMobile {
-  animation: menuMobile 0.9s ease-in-out;
+  animation: menuMobile 0.4s ease-in-out;
   display: none;
 }
 
 #menuMobileReservations{
-  animation: menuMobile 0.9s ease-in-out;
+  animation: menuMobile 0.4s ease-in-out;
   display: none;
 }
 
@@ -73,13 +71,11 @@ body {
 @media screen and (max-width: 900px) {
   #menuMobile {
     display: flex;
-   
   }
 
   #menu {
     display: none;
   }
-  
 }
 
 #overlay{
@@ -99,7 +95,11 @@ body {
   .headerReservation {
     column-gap: 4rem;
   }
- 
+}
+
+.btns-hero.menu .svg, .btns-hero.reservar #svg{
+  transition: ease-in-out 300ms;
+
 }
 
 .btns-hero.menu:hover .svg {
@@ -107,7 +107,7 @@ body {
   transform: scale(1.2);
 }
 
-.btns-hero.reservar:hover .svg {
+.btns-hero.reservar:hover #svg {
   rotate: -45deg;
   transform: scale(1.2);
 }
@@ -152,8 +152,6 @@ body {
 @media screen and (max-width:630px) {
   input {
     width: 100%;
-    margin-inline: 1rem;
-
   }
 }
 
@@ -161,10 +159,39 @@ body {
   .header {
     column-gap: 4rem;
   }
+
+  .labelResponsive{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1040px) {
+  #containerCalendar{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  #ButtonCalendar{
+    width: 100%;
+    display: flex;
+  }
+
+  #date-input{
+    width: 100%;
+    display: flex;
+  }
+}
+
+#ButtonCalendar:hover {
+  box-shadow: 1px 1px 5px 1px rgb(11, 11, 11);
 }
 
 input::placeholder {
-  color: orange;
+  color: black;
   font-weight: 700;
 }
 
@@ -176,25 +203,11 @@ input {
 
 input:hover {
   box-shadow: 1px 1px 5px 1px rgb(11, 11, 11);
-
-}
-
-input[type="datetime-local"] {
-  color: orange;
-  font-weight: 700;
-  justify-content: space-between;
-  display: none;
-}
-
-input[type="datatime-local"]:hover {
-  box-shadow: 0 1px 10px 1px rgb(255, 111, 0);
-  border: 2px orange solid;
-  color: orange;
 }
 
 input:focus {
-  border: 4px orange solid;
-  outline: orange;
+  border: 2px rgb(40, 40, 40) solid;
+  outline: rgb(40, 40, 40);
 }
 
 @media screen and (max-width:670px) {

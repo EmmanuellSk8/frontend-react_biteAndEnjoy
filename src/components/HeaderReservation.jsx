@@ -1,8 +1,7 @@
 import Logo from "../assets/icon.png";
-import React, { useState } from "react";
+import { useState } from "react";
 import "../index.css"
 import { Link, Route, Routes } from "react-router-dom";
-import ContainerReservation from "./ContainerReservation"
 import GetReservation from "./GetReservation";
 import CreateReservation from "./CreateReservation";
 import UpdateReservation from "./UpdateReservation";
@@ -19,7 +18,8 @@ export default function HeaderReservation() {
     return (
 
         <>
-            <header id="menuReservations" className="w-full justify-center p-4 bg-white shadow-md fixed top-0">
+
+            <header id="menuReservations" className="w-full justify-center p-4 bg-white shadow-md fixed top-0 left-0">
                 <nav className="headerReservation flex flex-wrap justify-center items-center gap-x-40">
 
                     <Link to="/reservations/create">
@@ -48,9 +48,9 @@ export default function HeaderReservation() {
                 </nav>
             </header>
 
-            <div id="menuMobileReservations" className="flex w-full fixed top-0 z-10">
+            <div id="menuMobileReservations" className="flex w-full fixed top-0 z-10 left-0">
 
-                <header id="menuMobileReservations" className="w-full flex justify-center p-4 bg-white shadow-md top-0 z-10 fixed">
+                <header id="menuMobileReservations" className="w-full flex justify-center p-4 bg-white shadow-md top-0 left-0 z-10 fixed">
 
                     <div className="flex items-center gap-4 justify-between w-full">
 
@@ -102,7 +102,6 @@ export default function HeaderReservation() {
                 <Route path="/delete" element={<DeleteReservation />} />
             </Routes>
         </>
-
 
     )
 }

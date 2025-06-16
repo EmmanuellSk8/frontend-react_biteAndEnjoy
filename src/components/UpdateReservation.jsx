@@ -1,6 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import Calendar from "./Calendar"
+import "../index.css"
 
 export default function UpdateReservation() {
+    const [peopleCount, setPeopleCount] = useState("")
 
     const UpdateReservation = useRef(null)
 
@@ -15,9 +18,16 @@ export default function UpdateReservation() {
             UpdateReservation.current.closeModal();
         }
     }
+
+    const HandleNumberDiners = (e) => {
+        const value = e.target.value;
+
+        if (/^\d*$/.test(value) && value.length <= 2 && value <= 12) {
+            setPeopleCount(value);
+        }
+    }
     return (
         <>
-
             <section className=" flex flex-col gap-10 mt-40 justify-around">
                 <h2 className="titles text-4xl font-semibold text-center">Actualizar reserva</h2>
 
@@ -45,26 +55,48 @@ export default function UpdateReservation() {
             </section>
 
             <dialog
-                className="px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg"
+                className="max-w-[586px] px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[#FDFCED] p-4 shadow-2xl"
                 ref={UpdateReservation}
             >
-
                 <h2 className="text-3xl mb-10 text-center font-medium">Actualizar reserva</h2>
 
                 <form action="" method="post" className="flex flex-wrap max-w-[608px] gap-x-2 gap-y-4">
 
-                    <input type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl w-full" placeholder="Nombre de ejemplo" disabled />
+                    <label className="flex flex-col w-full">
+                        <span className="text-lg font-semibold">Nombre</span>
+                        <input type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg w-full" disabled />
+                    </label>
 
-                    <input type="tel" className="w-[300px] cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Email de ejemplo" disabled />
+                    <label className="flex flex-col w-full">
+                        <span className="text-lg font-semibold">Teléfono</span>
+                        <input type="tel" className="cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-1.5 rounded-lg" disabled />
+                    </label>
 
-                    <input type="number" className="w-[300px] cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Cédula de ejemplo" disabled />
+                    <label className="labelResponsive">
+                        <span className="text-lg font-semibold">Cédula</span>
+                        <input type="number" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg" disabled />
+                    </label>
 
-                    <input type="number" className="w-[300px] cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Teléfono de prueba" disabled />
+                    <label className="labelResponsive">
+                        <span className="text-lg font-semibold">Número de personas</span>
+                        <input
+                            type="number"
+                            value={peopleCount}
+                            onChange={HandleNumberDiners}
+                            className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg"
+                            required
+                        />
+                    </label>
 
-                    <input type="number" className="w-[300px] cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Número de personas" required />
+                    <label className="flex flex-col w-full">
+                        <span className="text-lg font-semibold">Email</span>
+                        <input type="email" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg" disabled />
+                    </label>
 
-                    <input type="datetime-local" className="w-full cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl"/>
-
+                    <label className="w-full">
+                        <span className="text-lg font-semibold"> Fecha a reservar</span>
+                        <Calendar className="mt-1 flex items-center w-full gap-1" />
+                    </label>
 
                 </form>
 
@@ -82,8 +114,7 @@ export default function UpdateReservation() {
                     </form>
                 </div>
             </dialog>
-
         </>
+        
     )
-
 }

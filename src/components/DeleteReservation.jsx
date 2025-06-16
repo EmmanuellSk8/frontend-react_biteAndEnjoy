@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react"
 import "react-day-picker/style.css";
-import Calendar from "./Calendat";
 
 export default function DeleteReservation() {
     const id = "idDeprueba"
@@ -96,8 +95,6 @@ export default function DeleteReservation() {
                     </div>
                 </div>
             </section>
-
-            <Calendar/>
 
             <dialog
                 closedby="any"

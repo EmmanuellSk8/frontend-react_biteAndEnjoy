@@ -3,16 +3,13 @@ import postreHero from '../assets/postreHero.png';
 import Bg from '../assets/bg-imgs-hero.png';
 import { Link, Route, Routes } from 'react-router-dom';
 import ContainerReservation from './ContainerReservation';
+import "../index.css"
 
 export default function Hero() {
 
     return (
 
         <>
-
-            {/* <div class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div></div> */}
-            {/* <div class="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div> */}
-            {/* <div class="fixed top-0 z-[-2] h-screen w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"></div> */}
             <section id='Hero' className="w-[full] flex flex-wrap">
 
                 <div className="max-w-[1600px] flex mt-40 flex-wrap justify-between items-center content-center">
@@ -30,12 +27,12 @@ export default function Hero() {
                         <div className="flex gap-4">
 
                             <a href="#Menu" className="btns-hero menu  cursor-pointer mt-4 gap-1.5 flex font-extrabold bg-amber-100 w-fit text-black py-2 px-5 rounded-xl duration-300 ease-in-out items-center border-4 border-double">¡Ver menú!
-                                <svg className='svg duration-200 ease-in-out' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
+                                <svg className='svg' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
                             </a>
 
                             <Link to="/reservations">
                                 <button href="#" className="btns-hero reservar cursor-pointer mt-4 gap-1.5 flex font-extrabold bg-amber-100 w-fit text-black py-2 px-5 rounded-xl duration-300 ease-in-out items-center border-4 border-double">¡Reservar!
-                                    <svg className='svg duration-200 ease-in-out' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
+                                    <svg id='svg' className='svg duration-300 ease-in-out' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
                                 </button>
                             </Link>
 
@@ -48,9 +45,7 @@ export default function Hero() {
                         <img className='smallImg size-40 duration-900 hover:rotate-z-[360deg] cursor-pointer hover:scale-125' src={postreHero} alt="img" />
                     </div>
                 </div>
-
             </section>
-
 
             <Routes>
                 <Route path="/Reservations" element={<ContainerReservation />} />

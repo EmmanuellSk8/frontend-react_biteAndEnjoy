@@ -1,10 +1,17 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { Children, useEffect, useId, useRef, useState } from "react";
 
 import { format, isValid, parse } from "date-fns";
 import { DayPicker, DateBefore } from "react-day-picker";
 import { es } from "react-day-picker/locale"
+import "../index.css"
 
-export default function Dialog() {
+interface CalendarProps{
+
+  className: string;
+}
+
+
+export default function Calendar({className}: CalendarProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const dialogId = useId();
   const headerId = useId();
@@ -27,9 +34,11 @@ export default function Dialog() {
     if (isDialogOpen) {
       handleBodyScroll(true);
       dialogRef.current.showModal();
+      // dialogRef.current.style.display = "flex"
     } else {
       handleBodyScroll(false);
       dialogRef.current.close();
+      // dialogRef.current.style.display = "none"
     }
     return () => {
       handleBodyScroll(false);
@@ -67,33 +76,38 @@ export default function Dialog() {
   const matcher: DateBefore = { before: new Date(año, mes, dia) };
 
   return (
-    <div>
-      <label htmlFor="date-input">
-        <strong>Selecciona una fecha: </strong>
-      </label>
+    <div> 
+      <div id="containerCalendar" className={className}>
       <input
-        
+        className="border-1 rounded-lg py-1.5 px-2 w-[95%]"
         style={{ fontSize: "inherit" }}
         id="date-input"
         type="text"
         maxLength={10}
         value={inputValue}
-        placeholder="ejemplo: 06/23/2025"
+        placeholder="Ejemplo: 06/23/2025"
         onChange={handleInputChange}
+        disabled
+        required
       />{" "}
-      <button 
+            
+        <button
+        id="ButtonCalendar"
+        className="bg-gray-300/90 p-0.5 rounded-lg text-nowrap px-2 py-1.5 font-semibold cursor-pointer border-1 flex justify-between gap-2"
         style={{ fontSize: "inherit" }}
         onClick={toggleDialog}
         aria-controls="dialog"
         aria-haspopup="dialog"
         aria-expanded={isDialogOpen}
         aria-label="Abre el calendario para esccoger una fecha"
-      >
-        📆
+        >
+        <span>Seleccionar día de reserva</span> 📆
       </button>
+      </div>
 
       <dialog
-      closedby="any"
+        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2d"
+        closedby="any"
         role="dialog"
         ref={dialogRef}
         id={dialogId}
@@ -101,20 +115,20 @@ export default function Dialog() {
         aria-labelledby={headerId}
         onClose={() => setIsDialogOpen(false)}
       >
-        <DayPicker
-          locale={es}
-          month={month}
-          startMonth={new Date}
-          endMonth={new Date(año, mes + 1)}
-          onMonthChange={setMonth}
-          navLayout="around"
-          autoFocus
-          disabled={matcher}
-          mode="single"
-          selected={selectedDate}
-          onSelect={handleDayPickerSelect}
+          <DayPicker
+            locale={es}
+            month={month}
+            startMonth={new Date}
+            endMonth={new Date(año, mes + 1)}
+            onMonthChange={setMonth}
+            navLayout="around"
+            autoFocus
+            disabled={matcher}
+            mode="single"
+            selected={selectedDate}
+            onSelect={handleDayPickerSelect}
 
-        />
+          />
       </dialog>
     </div>
   );

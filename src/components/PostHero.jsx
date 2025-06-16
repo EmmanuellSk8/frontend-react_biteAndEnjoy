@@ -25,8 +25,6 @@ export default function PostHero() {
 
                 </div>
             </section>
-
         </>
-
     );
 }

@@ -9,9 +9,7 @@ export default function PreMenu() {
 
     return (
         <>
-
             <section className="flex flex-col gap-10 mt-20">
-
                 <div className="flex justify-between px-20 gap-10">
                     <h2 className='text-3xl font-normal text-orange-500 titles'>Algunos platos</h2>
                 </div>
@@ -24,7 +22,6 @@ export default function PreMenu() {
                     <CardMenu name={'Limonada de Coco'} ingredients={'Coco, jugo de limón, azúcar, agua, hielo'} img={lemon} />
                 </div>
             </section>
-
         </>
 
     );

@@ -28,7 +28,7 @@ return(
                     </svg>
                 </span>
                 
-                <h2 class="mt-4 text-2xl font-medium">Restaruante</h2>
+                <h2 class="mt-4 text-2xl font-medium">Restaurante</h2>
                 <p class="mt-2 text-gray-900 font-semibold text-lg">Ven a probar la mejor sazón.</p>
                 <p class="mt-2 text-orange-500 font-medium text-s">Robledo, Medellín, antioquia, Colombia.</p>
             </div>

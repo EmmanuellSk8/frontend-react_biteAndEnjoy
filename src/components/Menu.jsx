@@ -26,13 +26,10 @@ import mazamorra from '../assets/menu/postres/mazamorra.png'
 import natas from '../assets/menu/postres/postre-de-natas.png'
 import leche from '../assets/menu/postres/tres-leches.png'
 
-
 import CardMenu from "./CardMenu";
 
 export default function Menu() {
-
     return (
-
         <>
             <section className="flex flex-col gap-10 mt-20">
 
@@ -54,14 +51,11 @@ export default function Menu() {
                     <CardMenu name={'Empanadas'} ingredients={'carne molida, pollo o papa; y ají.'} img={empanadas} />
                 </div>
 
-
-
                 <div className="flex justify-between px-20 gap-10 mt-16">
                     <h2 className='text-3xl font-normal text-orange-500 titles'>Bebidas</h2>
                 </div>
 
                 <div className="w-full flex gap-10 mt-10 ml-10 flex-wrap">
-
                     <CardMenu name={'Limonada de coco'} ingredients={'Coco, jugo de limón, azúcar, agua, hielo.'} img={lemon} />
                     <CardMenu name={'Mojito de Maracuyá'} ingredients={' Ron, maracuyá, hojas de menta, azúcar, soda, hielo.'} img={mojito} />
                     <CardMenu name={'Smoothie Tropical'} ingredients={' Mango, piña, banana, yogur, miel, hielo.'} img={smoothie} />
@@ -71,28 +65,21 @@ export default function Menu() {
                     <CardMenu name={'Cerveza Budweiser'} ingredients={'Cebada, lúpulo, agua.'} img={budweiser} />
                     <CardMenu name={'Cerveza Corona'} ingredients={'Cebada, lúpulo, agua.'} img={corona} />
                     <CardMenu name={'Cerveza Heineken'} ingredients={'Cebada, lúpulo, agua.'} img={heineken} />
-
                 </div>
-
 
                 <div className="flex justify-between px-20 gap-10 mt-16">
                     <h2 className='text-3xl font-normal text-orange-500 titles'>Postres</h2>
                 </div>
 
                 <div className="w-full flex gap-10 mt-10 ml-10 flex-wrap">
-
                     <CardMenu name={'Arroz con leche'} ingredients={'Arroz, leche, azúcar, canela, leche condensada.'} img={arroz} />
                     <CardMenu name={'Brevas con arequipe'} ingredients={'Brevas en almíbar, arequipe, queso.'} img={brevas} />
                     <CardMenu name={'Mazamorra'} ingredients={'Mazamorra, bocadillo y panela.'} img={mazamorra} />
                     <CardMenu name={'Postre de nata'} ingredients={'Leche, azúcar, huevos, canela y fresas.'} img={natas} />
                     <CardMenu name={'Tres leches'} ingredients={' Bizcocho, leche condensada, leche evaporada, crema de leche.'} img={leche} />
-
                 </div>
 
             </section>
-
         </>
-
     );
-
 }

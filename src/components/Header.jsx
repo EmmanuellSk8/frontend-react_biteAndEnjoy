@@ -24,7 +24,7 @@ export default function Header() {
                     </a>
                     <a href="#About" className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Nosotros</a>
 
-                    <Link to="/Reservations">
+                    <Link to="/Reservations" target="_blank">
                         <button href="#contact" className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Reservas</button>
                     </Link>
 
@@ -51,11 +51,11 @@ export default function Header() {
 
                     <div id="menuMobile" className="w-full flex justify-center">
 
-                        <nav id="menuMobile2" className="flex-col gap-6 py-6 gap-x-40 mt-20 border-t-2 duration-500 ease-in-out bg-white shadow-md w-full flex items-center z-10">
+                        <nav id="menuMobile2" className="flex-col gap-6 py-6 gap-x-40 mt-20 border-t-2 duration-300 ease-in-out bg-white shadow-md w-full flex items-center z-10">
                             <a href="#Hero" className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Inicio</a>
                             <a href="#Menu" className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Menú</a>
                             <a href="#About" className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Nosotros</a>
-                            <Link to="/Reservations">
+                            <Link to="/Reservations" target="_blank">
                                 <button href="#contact" className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Reservas</button>
                             </Link>
 
@@ -64,9 +64,6 @@ export default function Header() {
                 )}
             </div>
 
-
         </>
-
-
     )
 }
