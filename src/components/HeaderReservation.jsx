@@ -19,7 +19,7 @@ export default function HeaderReservation() {
 
         <>
 
-            <header id="menuReservations" className="w-full justify-center p-4 bg-white shadow-md fixed top-0 left-0">
+            <header id="menuReservations" className="w-full justify-center p-4 bg-white shadow-md fixed top-0 left-0 z-20">
                 <nav className="headerReservation flex flex-wrap justify-center items-center gap-x-40">
 
                     <Link to="/reservations/create">

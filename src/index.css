@@ -53,17 +53,17 @@ body {
   display: none;
 }
 
-#menuMobileReservations{
+#menuMobileReservations {
   animation: menuMobile 0.4s ease-in-out;
   display: none;
 }
 
 @media screen and (max-width:1056px) {
-  #menuMobileReservations{
+  #menuMobileReservations {
     display: flex;
-  } 
+  }
 
-  #menuReservations{
+  #menuReservations {
     display: none;
   }
 }
@@ -78,7 +78,7 @@ body {
   }
 }
 
-#overlay{
+#overlay {
   display: none;
   position: fixed;
   inset: 0;
@@ -87,7 +87,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
-#overlay.active{
+#overlay.active {
   display: block;
 }
 
@@ -97,7 +97,8 @@ body {
   }
 }
 
-.btns-hero.menu .svg, .btns-hero.reservar #svg{
+.btns-hero.menu .svg,
+.btns-hero.reservar #svg {
   transition: ease-in-out 300ms;
 
 }
@@ -160,7 +161,7 @@ body {
     column-gap: 4rem;
   }
 
-  .labelResponsive{
+  .labelResponsive {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -168,19 +169,19 @@ body {
 }
 
 @media screen and (max-width:1040px) {
-  #containerCalendar{
+  #containerCalendar {
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
     gap: 12px;
   }
-  
-  #ButtonCalendar{
+
+  #ButtonCalendar {
     width: 100%;
     display: flex;
   }
 
-  #date-input{
+  #date-input {
     width: 100%;
     display: flex;
   }
@@ -271,4 +272,53 @@ input:focus {
     flex-direction: column;
   }
 
+}
+
+
+Html {
+  overflow: auto;
+}
+
+Html::-webkit-scrollbar {
+  width: 13px;
+}
+
+Html::-webkit-scrollbar-track {
+  /* background: #ddc806; */
+  /* border-radius: 10px; */
+  background: #444040;
+}
+
+Html::-webkit-scrollbar-thumb {
+  background: #FE9A00;
+  border-radius: 10px;
+}
+
+Html::-webkit-scrollbar-thumb:hover {
+  background: #d59638;
+}
+
+@media screen and (max-width:370px) {
+  
+  .containerCreateReservation{
+    width: 280px;
+    /* max-width: none;
+    min-width: none; */
+    margin-right: 12px;
+    margin-inline: 0;
+  }
+
+  .container-btns-reservation{
+    margin-left: -1rem;
+  }
+
+  .container-btns-delete{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .modalUpdateReservation{
+    width: 100%;
+  }
 }

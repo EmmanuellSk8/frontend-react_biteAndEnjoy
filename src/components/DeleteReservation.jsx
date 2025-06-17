@@ -83,7 +83,7 @@ export default function DeleteReservation() {
                         <input type="tel" className="w-full cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Clave privada" required title="La clave privada fue enviada al correo" />
                     </form>
 
-                    <div id="BtnDeleteReservation" className="container-btns-reservation flex justify-between px-6 mt-4 flex-wrap gap-2">
+                    <div className="container-btns-reservation flex justify-between px-6 mt-4 flex-wrap gap-2">
                         <a
                             onClick={openModal}
                             className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl hover:bg-lime-500/90 cursor-pointer hover:scale-105 ease-in-out duration-300 hover:text-white font-bold">
@@ -98,7 +98,7 @@ export default function DeleteReservation() {
 
             <dialog
                 closedby="any"
-                className="px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg justify-center"
+                className="overflow-x-hidden px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg justify-center"
                 ref={deleteModal}
                 id="ModalDelete">
                 <div className="text-center gap-2 flex-col flex mb-16">
@@ -106,7 +106,7 @@ export default function DeleteReservation() {
                     <p className="text-2xl">¿Desea eliminarla?</p>
                 </div>
 
-                <div className="container-btns-delete flex justify-between mt-5 px-20 flex-wrap gap-4">
+                <div className="container-btns-delete flex justify-center w-full mt-5 px-20 flex-nowrap gap-4">
                     <button
                         onClick={openConfirmModal}
                         className="w-[140px] bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-red-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl"
@@ -114,7 +114,7 @@ export default function DeleteReservation() {
 
                     <form method="dialog">
                         <button
-                            className="w-[140px] bg-amber-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-lime-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl"
+                            className="w-[140px] bg-amber-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-lime-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl text-nowrap"
                             onClick={closeModal}
                         >No, cerrar</button>
                     </form>
@@ -124,22 +124,22 @@ export default function DeleteReservation() {
             <dialog
                 closedby="any"
                 ref={confirmDeleteModal}
-                className="px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg"
+                className="overflow-x-hidden px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg"
                 id="confirmDelete">
                 <div className="text-center gap-2 flex-col flex mb-16">
                     <p className="text-2xl">¿Está seguro que <span className="text-red-600 font-semibold">desea eliminar la reserva</span> asociada al id: {id}?</p>
                     <p className="text-2xl">¿Desea eliminarla?</p>
                 </div>
 
-                <div className="container-btns-delete flex justify-between mt-5 px-20 flex-wrap gap-4">
+                <div className="container-btns-delete flex justify-center w-full mt-5 px-20 flex-nowrap gap-4">
                     <button
-                        className="w-[140px] bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-red-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl"
+                        className="w-[140px] bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-red-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl text-nowrap"
                     >Sí, eliminar</button>
 
                     <form method="dialog">
                         <button
                             onClick={closeConfirmModal}
-                            className="w-[140px] bg-amber-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-lime-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl"
+                            className="w-[140px] bg-amber-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-lime-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl text-nowrap"
                         >No, cerrar</button>
                     </form>
                 </div>

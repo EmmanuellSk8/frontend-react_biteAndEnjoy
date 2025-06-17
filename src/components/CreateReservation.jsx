@@ -17,23 +17,23 @@ export default function CreateReservation() {
             <section className="flex flex-col gap-10 mt-40 justify-around shadow-2xl px-4 py-6 rounded-xl bg-amber-50/40">
                 <h2 className="titles text-4xl font-semibold text-center">Reservar</h2>
 
-                <div className="flex gap-2 flex-col mx-3 max-w-[500px]">
+                <div className="containerCreateReservation flex gap-2 flex-col mx-4 max-w-[510px]">
 
                     <form method="post" className="flex flex-wrap max-w-[608px] gap-x-2 gap-y-4">
 
                         <label className="flex flex-col w-full">
                             <span className="text-lg font-semibold">Nombre</span>
-                            <input type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg w-full" disabled />
+                            <input type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg w-full" />
                         </label>
 
                         <label className="flex flex-col w-full">
                             <span className="text-lg font-semibold">Teléfono</span>
-                            <input type="tel" className="cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-1.5 rounded-lg" disabled />
+                            <input type="tel" className="cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-1.5 rounded-lg" />
                         </label>
 
                         <label className="labelResponsive">
                             <span className="text-lg font-semibold">Cédula</span>
-                            <input type="number" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg" disabled />
+                            <input type="number" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg" />
                         </label>
 
                         <label className="labelResponsive">
@@ -58,7 +58,7 @@ export default function CreateReservation() {
 
                     </form>
 
-                    <div className="container-btns-reservation flex justify-between px-6 mt-4 flex-wrap gap-2">
+                    <div className="container-btns-reservation flex justify-between px-6 mt-4 flex-nowrap gap-2">
                         <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl hover:bg-lime-500/90 cursor-pointer hover:scale-105 ease-in-out duration-300  hover:text-white font-bold">
                             Reservar</a>
 

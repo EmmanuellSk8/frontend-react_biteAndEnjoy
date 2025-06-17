@@ -55,7 +55,7 @@ export default function UpdateReservation() {
             </section>
 
             <dialog
-                className="max-w-[586px] px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[#FDFCED] p-4 shadow-2xl"
+                className="modalUpdateReservation max-w-[586px] px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[#FDFCED] p-4 shadow-2xl"
                 ref={UpdateReservation}
             >
                 <h2 className="text-3xl mb-10 text-center font-medium">Actualizar reserva</h2>
@@ -100,7 +100,7 @@ export default function UpdateReservation() {
 
                 </form>
 
-                <div className="container-btns-delete flex justify-between mt-5 px-20 flex-wrap gap-4">
+                <div className="container-btns-delete flex justify-between mt-5 px-20 flex-nowrap gap-4">
                     <button
                         className="w-[140px] bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-lime-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl"
 

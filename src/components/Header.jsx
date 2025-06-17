@@ -14,7 +14,7 @@ export default function Header() {
     return (
         <>
 
-            <header id="menu" className="w-full justify-center p-4 bg-white shadow-md fixed top-0">
+            <header id="menu" className="w-full justify-center p-4 bg-white shadow-md fixed top-0 z-10">
                 <nav className="header flex flex-wrap justify-center items-center gap-x-40">
                     <a href="#Hero" className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Inicio</a>
                     <a href="#Menu" className="text-[1.3rem] font-medium hover:text-orange-400 hover:scale-110 duration-200 ease-in-out">Menú</a>
