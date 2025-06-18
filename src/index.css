@@ -97,13 +97,13 @@ body {
   }
 }
 
-.btns-hero.menu .svg,
+.btns-hero-menu .svgMenu,
 .btns-hero.reservar #svg {
   transition: ease-in-out 300ms;
 
 }
 
-.btns-hero.menu:hover .svg {
+.btns-hero-menu:hover .svgMenu {
   rotate: 90deg;
   transform: scale(1.2);
 }
