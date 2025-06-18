@@ -3,12 +3,12 @@ import postreHero from '../assets/postreHero.png';
 import Bg from '../assets/bg-imgs-hero.png';
 import { Link, Route, Routes } from 'react-router-dom';
 import ContainerReservation from './ContainerReservation';
+import AtroposCard from './Atropos';
 import "../index.css"
 
 export default function Hero() {
 
     return (
-
         <>
             <section id='Hero' className="w-[full] flex flex-wrap">
 
@@ -41,7 +41,8 @@ export default function Hero() {
 
                     <div id='container-imgs-hero' className='flex-row-reverse flex items-end'>
                         <img id='bgImgsHero' className='absolute -z-10 opacity-15 w-[550px]' src={Bg} alt="img" />
-                        <img id='bigImg' className=' duration-900 hover:rotate-z-[360deg] cursor-pointer' src={ImgHero} alt="img" />
+                                <AtroposCard/>
+
                         <img className='smallImg size-40 duration-900 hover:rotate-z-[360deg] cursor-pointer hover:scale-125' src={postreHero} alt="img" />
                     </div>
                 </div>
