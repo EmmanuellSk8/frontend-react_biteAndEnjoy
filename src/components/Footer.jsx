@@ -1,10 +1,11 @@
+import { Link, Route, Routes } from 'react-router-dom';
 import logo from '../assets/icon.png';
 import "../index.css"
+import ContainerReservation from './ContainerReservation';
 
 export default function Footer() {
 
     return (
-
         <>
             <footer class="bg-white rounded-lg shadow-sm m-4 w-full mt-40 bottom-0">
                 <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
@@ -20,9 +21,11 @@ export default function Footer() {
                             <li>
                                 <a href="#Menu" class="hover:text-orange-400 hover:scale-110 duration-200 ease-in-out me-4 md:me-6">Menú</a>
                             </li>
+                            <Link to="/Reservations" target='_blank'>
                             <li>
-                                <a href="#" class="hover:text-orange-400 hover:scale-110 duration-200 ease-in-out me-4 md:me-6">Reservar</a>
+                                <button href="#" class="hover:text-orange-400 hover:scale-110 duration-200 ease-in-out me-4 md:me-6">Reservar</button>
                             </li>
+                            </Link>
                             <li>
                                 <a href="#About" class="hover:text-orange-400 hover:scale-110 duration-200 ease-in-out me-4 md:me-6">Acerca de nosotros</a>
                             </li>
@@ -33,7 +36,10 @@ export default function Footer() {
                     <span class="block text-sm text-gray-500 sm:text-center">© 2025 Bite & Enjoy™. Casi todos los derechos reservados.</span>
                 </div>
             </footer>
+            
+            <Routes>
+                <Route path="/Reservations" element={<ContainerReservation />} />
+            </Routes>
         </>
     )
-
 }

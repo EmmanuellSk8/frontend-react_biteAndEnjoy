@@ -17,8 +17,8 @@ export default function ContainerMenu() {
 
         <>
 
-                <div id='Menu' className="flex justify-around px-20 gap-10 mt-40 flex-wrap mr-3 w-full">
-                    <div className="flex flex-wrap justify-between w-[1600px] gap-4">
+                <div id='Menu' className="flex justify-around px-2 gap-10 mt-40 flex-wrap w-full">
+                    <div className="flex flex-nowrap justify-between w-[1600px] ">
 
                         <h2 className='text-3xl font-semibold titles'>Menú</h2>
 
@@ -26,7 +26,7 @@ export default function ContainerMenu() {
                             {isMenuVisible && (
                                 <Link to="/home/maxmenu">
                                     <button
-                                        className=' bg-amber-600 flex py-2.5 px-5 rounded-xl text-amber-50 font-bold cursor-pointer hover:scale-110 duration-300 ease-in-out'
+                                        className=' bg-amber-600 flex py-2.5 px-5 rounded-xl text-amber-50 font-bold cursor-pointer hover:scale-110 duration-300 ease-in-out text-nowrap'
                                         onClick={toggleMenu}
                                     >
                                         Ver menú completo
@@ -37,7 +37,7 @@ export default function ContainerMenu() {
                             {!isMenuVisible && (
                                 <Link to="/home/minmenu">
                                     <button
-                                        className='bg-amber-600 py-2.5 px-5 rounded-xl text-amber-50 font-bold cursor-pointer hover:scale-110 duration-300 ease-in-out'
+                                        className='bg-amber-600 py-2.5 px-5 rounded-xl text-amber-50 font-bold cursor-pointer hover:scale-110 duration-300 ease-in-out text-nowrap'
                                         onClick={toggleMenu}
                                     >
                                         Contraer menú

@@ -5,7 +5,7 @@ export default function GetReservation() {
  <section className=" flex flex-col gap-10 mt-40 justify-around">
                 <h2 className="titles text-4xl font-semibold text-center">Consultar reservas</h2>
 
-                <div className="flex gap-2 flex-col">
+                <div className="flex gap-2 flex-col mx-2">
 
                     <form action="" method="post" className="flex flex-wrap max-w-[608px] gap-x-2 gap-y-4">
               
@@ -14,7 +14,7 @@ export default function GetReservation() {
                     </form>
 
                     <div className="flex justify-center px-6 mt-4">
-                        <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl hover:bg-lime-500/90 cursor-pointer hover:scale-105 ease-in-out duration-300  hover:text-white font-bold">
+                        <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
                         Consultar reservas</a>
 
                     </div>

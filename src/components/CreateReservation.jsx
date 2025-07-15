@@ -58,12 +58,10 @@ export default function CreateReservation() {
 
                     </form>
 
-                    <div className="container-btns-reservation flex justify-between px-6 mt-4 flex-nowrap gap-2">
-                        <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl hover:bg-lime-500/90 cursor-pointer hover:scale-105 ease-in-out duration-300  hover:text-white font-bold">
+                    <div className="container-btns-reservation flex justify-center px-6 mt-4 flex-nowrap gap-2">
+                        <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
                             Reservar</a>
-
-                        <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 hover:bg-red-600 hover:text-white font-bold">
-                            Cancelar</a>
+                        
                     </div>
                 </div>
 

@@ -7,7 +7,7 @@ export default function CardMenu({name, ingredients, img}) {
 
             <article className="cursor-pointer shadow-xl flex flex-col justify-between items-center gap-4 py-10 px-6 bg-white/80">
                 <div className=" w-fit px-8 py-4 rounded-xl">
-                    <img className="size-56" src={img} alt="" />
+                    <img className="size-56 object-contain aspect-square" src={img} alt="" />
                 </div>
 
                 <div className="flex flex-col gap-4 mt-4 max-w-72 top-0">

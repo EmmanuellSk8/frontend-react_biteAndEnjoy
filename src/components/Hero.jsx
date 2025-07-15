@@ -1,4 +1,3 @@
-import ImgHero from '../assets/imgHero.png';
 import postreHero from '../assets/postreHero.png';
 import Bg from '../assets/bg-imgs-hero.png';
 import { Link, Route, Routes } from 'react-router-dom';
@@ -27,7 +26,7 @@ export default function Hero() {
 
                         <div className="flex gap-4">
 
-                            <a href="#Menu" className="btns-hero-menu cursor-pointer mt-4 gap-1.5 flex font-extrabold bg-amber-100 w-fit text-black py-2 px-5 rounded-xl duration-300 ease-in-out items-center border-4 border-double">¡Ver menú!
+                            <a href="#Menu" className="btns-hero-menu cursor-pointer mt-4 gap-1.5 flex font-extrabold bg-amber-100 w-fit text-black py-2 px-5 rounded-xl duration-300 ease-in-out items-center border-4 border-double text-nowrap">¡Ver menú!
                                 <ArrowIcon className="svgMenu"/>
                             </a>
                                

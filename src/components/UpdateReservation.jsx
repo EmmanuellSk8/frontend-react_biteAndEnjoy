@@ -28,7 +28,7 @@ export default function UpdateReservation() {
     }
     return (
         <>
-            <section className=" flex flex-col gap-10 mt-40 justify-around">
+            <section className=" flex flex-col gap-10 mt-40 justify-around px-2">
                 <h2 className="titles text-4xl font-semibold text-center">Actualizar reserva</h2>
 
                 <div className="flex gap-2 flex-col">
@@ -41,21 +41,17 @@ export default function UpdateReservation() {
 
                     </form>
 
-                    <div className="container-btns-reservation flex justify-between px-6 mt-4 flex-wrap gap-2">
+                    <div className="container-btns-reservation flex justify-center px-6 mt-4 flex-wrap gap-2">
                         <a
                             onClick={openModal}
-                            className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl hover:bg-lime-500/90 cursor-pointer hover:scale-105 ease-in-out duration-300  hover:text-white font-bold">
-                            Consultar</a>
-
-                        <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 hover:bg-red-600 hover:text-white font-bold">
-                            Cancelar</a>
+                            className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl hover:bg-amber-500 cursor-pointer hover:scale-105 ease-in-out duration-300   font-bold ">
+                            Actualizar reserva</a>  
                     </div>
                 </div>
-
             </section>
 
             <dialog
-                className="modalUpdateReservation max-w-[586px] px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[#FDFCED] p-4 shadow-2xl"
+                className="modalUpdateReservation max-w-[586px] px-8 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[#FDFCED] p-4 shadow-2xl"
                 ref={UpdateReservation}
             >
                 <h2 className="text-3xl mb-10 text-center font-medium">Actualizar reserva</h2>
@@ -102,14 +98,13 @@ export default function UpdateReservation() {
 
                 <div className="container-btns-delete flex justify-between mt-5 px-20 flex-nowrap gap-4">
                     <button
-                        className="w-[140px] bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-lime-500/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl"
-
+                        className="w-[140px] bg-amber-500 px-4 py-1.5 cursor-pointerbg-green-600 hover:bg-ambar-600 rounded-lg duration-200 ease-in-out hover:scale-105 font-semibold text-xl border-2 border-black"
                     >Actualizar</button>
 
                     <form method="dialog">
                         <button
                             onClick={closeModal}
-                            className="w-[140px] bg-amber-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-orange-400 duration-200 ease-in-out hover:scale-105 font-semibold text-xl"
+                            className="w-[140px] bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-gray-400 duration-200 ease-in-out hover:scale-105 font-semibold text-xl border-2 border-black"
                         >Cancelar</button>
                     </form>
                 </div>
