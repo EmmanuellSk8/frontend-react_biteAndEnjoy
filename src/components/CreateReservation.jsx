@@ -8,7 +8,7 @@ export default function CreateReservation() {
         const HandleNumberDiners = (e) => {
         const value = e.target.value;
 
-        if (/^\d*$/.test(value) && value.length <= 2 && value <= 12) {
+        if (/^\d*$/.test(value) && value.length <= 2 && value > 0 && value <= 12 ) {
             setPeopleCount(value);
         }
     }
@@ -60,14 +60,10 @@ export default function CreateReservation() {
 
                     <div className="container-btns-reservation flex justify-center px-6 mt-4 flex-nowrap gap-2">
                         <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
-                            Reservar</a>
-                        
+                            Reservar</a> 
                     </div>
                 </div>
-
             </section>
-
         </>
     );
-
 }

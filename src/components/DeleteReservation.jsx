@@ -71,7 +71,7 @@ export default function DeleteReservation() {
             overlay.current.classList.remove("active")
         }
     };
-    
+
     return (
         <>
             <section className="flex flex-col gap-10 mt-40 justify-around">
@@ -87,7 +87,7 @@ export default function DeleteReservation() {
                         <a
                             onClick={openModal}
                             className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
-                            Eliminar reserva</a>                
+                            Eliminar reserva</a>
                     </div>
                 </div>
             </section>
@@ -97,6 +97,8 @@ export default function DeleteReservation() {
                 className="overflow-x-hidden px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg justify-center"
                 ref={deleteModal}
                 id="ModalDelete">
+                <div class="absolute h-full w-full bg-white"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
+                
                 <div className="text-center gap-2 flex-col flex mb-16">
                     <p className="text-2xl">Se encontró una reserva asociada al id: {id}</p>
                     <p className="text-2xl">¿Desea eliminarla?</p>

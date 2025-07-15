@@ -14,12 +14,10 @@ body {
   -webkit-text-stroke-color: black;
 }
 
-
 @media screen and (max-width:342px) {
   .container-btns-reservation {
     justify-content: center;
   }
-
 }
 
 @media screen and (max-width:440px) {
@@ -35,7 +33,6 @@ body {
   #ModalDelete {
     width: 100%;
   }
-
 }
 
 @keyframes menuMobile {
@@ -100,7 +97,6 @@ body {
 .btns-hero-menu .svgMenu,
 .btns-hero.reservar #svg {
   transition: ease-in-out 300ms;
-
 }
 
 .btns-hero-menu:hover .svgMenu {
@@ -112,7 +108,6 @@ body {
   rotate: -45deg;
   transform: scale(1.2);
 }
-
 
 .titles {
   font-family: 'Caveat Variable', cursive;
@@ -198,7 +193,6 @@ input::placeholder {
 
 input {
   font-weight: 700;
-  /* color: rgb(36, 35, 35); */
   color: black;
 }
 
@@ -250,7 +244,6 @@ input:focus {
     gap: 5rem;
   }
 
-
   #postHero img {
     max-width: 280px;
   }
@@ -262,18 +255,14 @@ input:focus {
   #Hero {
     margin-left: .5rem;
   }
-
 }
 
 @media screen and (max-width:980px) {
-
   #postHero .first-container,
   #postHero .second-container {
     flex-direction: column;
   }
-
 }
-
 
 Html {
   overflow: auto;
@@ -284,8 +273,6 @@ Html::-webkit-scrollbar {
 }
 
 Html::-webkit-scrollbar-track {
-  /* background: #ddc806; */
-  /* border-radius: 10px; */
   background: #444040;
 }
 
@@ -299,11 +286,8 @@ Html::-webkit-scrollbar-thumb:hover {
 }
 
 @media screen and (max-width:370px) {
-  
   .containerCreateReservation{
     width: 280px;
-    /* max-width: none;
-    min-width: none; */
     margin-right: 12px;
     margin-inline: 0;
   }
