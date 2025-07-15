@@ -1,29 +1,20 @@
-import { Navigate, useLocation } from 'react-router-dom';
-import Header from './components/Header';
-import ContainerHomePage from './components/ContainerHomePage';
+import { Navigate } from 'react-router-dom';
 import ContainerReservation from './components/ContainerReservation';
-import ReservationHeader from './components/HeaderReservation';
 import { Route, Routes } from "react-router-dom";
+import PageNotFound from './pages/PageNotFound';
+import HomePage from './pages/Homepage';
 
 function App() {
 
-  const location = useLocation();
-  const isReservationsPath = location.pathname.startsWith("/Reservations")
-
   return (
     <section className='w-full justify-center items-center flex flex-col'>
-
-      {!isReservationsPath ? <Header /> : <ReservationHeader />}
-
       <Routes>
-        <Route path="/" element={<ContainerHomePage />} />
         <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home/*" element={<ContainerHomePage />} />
+        <Route path="/home/*" element={<HomePage />} />
         <Route path="/Reservations/*" element={<ContainerReservation />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </section>
-
-
   );
 }
 
