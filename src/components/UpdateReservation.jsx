@@ -44,7 +44,7 @@ export default function UpdateReservation() {
                     <div className="container-btns-reservation flex justify-center px-6 mt-4 flex-wrap gap-2">
                         <a
                             onClick={openModal}
-                            className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl hover:bg-amber-500 cursor-pointer hover:scale-105 ease-in-out duration-300   font-bold">
+                            className="border-6 border-double bg-amber-500 px-8 py-2 rounded-xl hover:bg-amber-500 cursor-pointer hover:scale-105 ease-in-out duration-300   font-bold">
                             Actualizar reserva</a>  
                     </div>
                 </div>
@@ -60,17 +60,17 @@ export default function UpdateReservation() {
 
                     <label className="flex flex-col w-full">
                         <span className="text-lg font-semibold">Nombre</span>
-                        <input type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg w-full" disabled />
+                        <input type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-lg w-full" disabled />
                     </label>
 
                     <label className="flex flex-col w-full">
                         <span className="text-lg font-semibold">Teléfono</span>
-                        <input type="tel" className="cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-1.5 rounded-lg" disabled />
+                        <input type="tel" className="cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-2 rounded-lg" disabled />
                     </label>
 
                     <label className="labelResponsive">
                         <span className="text-lg font-semibold">Cédula</span>
-                        <input type="number" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg" disabled />
+                        <input type="number" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-lg" disabled />
                     </label>
 
                     <label className="labelResponsive">
@@ -79,32 +79,32 @@ export default function UpdateReservation() {
                             type="number"
                             value={peopleCount}
                             onChange={HandleNumberDiners}
-                            className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg"
+                            className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-lg"
                             required
                         />
                     </label>
 
                     <label className="flex flex-col w-full">
                         <span className="text-lg font-semibold">Email</span>
-                        <input type="email" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg" disabled />
+                        <input type="email" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-lg" disabled />
                     </label>
 
-                    <label className="w-full">
+                    <label className="w-full flex flex-col">
                         <span className="text-lg font-semibold"> Fecha a reservar</span>
-                        <Calendar className="mt-1 flex items-center w-full gap-1" />
+                        <Calendar />
                     </label>
 
                 </form>
 
                 <div className="container-btns-delete flex justify-between mt-5 px-20 flex-nowrap gap-4">
                     <button
-                        className="w-[140px] bg-amber-500 px-4 py-1.5 cursor-pointerbg-green-600 hover:bg-amber-500/90 rounded-lg duration-200 ease-in-out hover:scale-105 font-semibold text-xl border-2 border-black"
+                        className="w-[140px] bg-amber-500 px-4 py-2 cursor-pointerbg-green-600 hover:bg-amber-500/90 rounded-lg duration-200 ease-in-out hover:scale-105 font-semibold text-xl border-2 border-black"
                     >Actualizar</button>
 
                     <form method="dialog">
                         <button
                             onClick={closeModal}
-                            className="w-[140px] bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-gray-400 duration-200 ease-in-out hover:scale-105 font-semibold text-xl border-2 border-black"
+                            className="w-[140px] bg-gray-300 px-4 py-2 cursor-pointer rounded-lg hover:bg-gray-400 duration-200 ease-in-out hover:scale-105 font-semibold text-xl border-2 border-black"
                         >Cancelar</button>
                     </form>
                 </div>

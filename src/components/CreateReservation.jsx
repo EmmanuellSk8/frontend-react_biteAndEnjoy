@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Calendar from "./Calendar"
 import "../index.css"
+import Calendar from "./Calendar";
+
 
 export default function CreateReservation() {
     const [peopleCount, setPeopleCount] = useState("")
@@ -23,17 +24,17 @@ export default function CreateReservation() {
 
                         <label className="flex flex-col w-full">
                             <span className="text-lg font-semibold">Nombre</span>
-                            <input type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg w-full" />
+                            <input type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-lg w-full" />
                         </label>
 
                         <label className="flex flex-col w-full">
                             <span className="text-lg font-semibold">Teléfono</span>
-                            <input type="tel" className="cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-1.5 rounded-lg" />
+                            <input type="tel" className="cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-2 rounded-lg" />
                         </label>
 
                         <label className="labelResponsive">
                             <span className="text-lg font-semibold">Cédula</span>
-                            <input type="number" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg" />
+                            <input type="number" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-lg" />
                         </label>
 
                         <label className="labelResponsive">
@@ -42,18 +43,18 @@ export default function CreateReservation() {
                                 type="number"
                                 value={peopleCount}
                                 onChange={HandleNumberDiners}
-                                className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg"
+                                className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-lg"
                             />
                         </label>
 
                         <label className="flex flex-col w-full">
                             <span className="text-lg font-semibold">Email</span>
-                            <input type="email" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-1.5 rounded-lg" required />
+                            <input type="email" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-lg" required />
                         </label>
 
-                        <label className="w-full">
+                        <label className="w-full flex flex-col">
                             <span className="text-lg font-semibold"> Fecha a reservar</span>
-                            <Calendar className="mt-1 flex items-center w-full gap-1" />
+                            <Calendar/>
                         </label>
 
                     </form>

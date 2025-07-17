@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react"
-import "react-day-picker/style.css";
 
 export default function DeleteReservation() {
     const id = "idDeprueba"
