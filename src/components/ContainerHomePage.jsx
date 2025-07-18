@@ -4,6 +4,8 @@ import PostHero from './PostHero';
 import About from './About';
 import ContainerMenu from './ContainerMenu';
 import Footer from './Footer';
+import Client from './Clients';
+import MarqueeCards from './Test';
 
 export default function ContainerHomePage() {
 
@@ -13,6 +15,8 @@ export default function ContainerHomePage() {
             <Hero />
             <PostHero />
             <ContainerMenu />
+            <MarqueeCards/>
+            {/* <Client/> */}
             <About />
             <Footer/>
         </>
