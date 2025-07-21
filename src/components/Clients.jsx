@@ -1,4 +1,4 @@
-export default function Client() {
+const Clients = () => {
     const clients = [
         { img: "https://imgs.search.brave.com/r-keUdxFW6S5sqa5qOC0x2DncVwzqdx5MMh7aTepYho/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMjE2/Mzk4MzAyOS9lcy9m/b3RvL3VuYS1tdWpl/ci1qb3Zlbi1jb24t/Y2FiZWxsby1jb3J0/by1zZS10b2NhLWxh/LWJhcmJpbGxhLWNv/bi1lbC1kZWRvLXkt/bWlyYS1oYWNpYS1h/cnJpYmEtY29uLXVu/YS5qcGc_Yj0xJnM9/NjEyeDYxMiZ3PTAm/az0yMCZjPU5HRV9O/MXJkSUlSVndKMDhG/bzJkOVlRVk00MUpS/UE5fbldXTm1MZHd0/YnM9", nombre: "María Rodríguez", account: "@MariaR", recomendacion: "La pasta Alfredo es increíble, muy cremosa y bien servida." },
         { img: "https://imgs.search.brave.com/5JwDfGlPc7djyU5wLGs5sKGooWAPxymzU_xnSwzO3vc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMx/OTc2Mzg5NS9lcy9m/b3RvL3NvbnJpZW50/ZS1yYXphLW1peHRh/LWhvbWJyZS1tYWR1/cm8tc29icmUtZm9u/ZG8tZ3Jpcy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9c0dC/d01FWnI4UmR5RnVP/RjAwODR0ZVNUYzFU/d016ZHBIam93UDlR/UldUdz0", nombre: "Juan Pérez", account: "@JuanP", recomendacion: "Recomiendo la hamburguesa doble con queso cheddar, es una locura." },
@@ -22,11 +22,11 @@ export default function Client() {
         { img: "https://imgs.search.brave.com/HGeSJIa-IYeRyml8uKEr1WIEM5xGVqOe5mmdsM9m35I/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjMv/MTIwLzA5MC9zbWFs/bC9haS1nZW5lcmF0/aXZlLWEtbWFuLW9u/LXNvbGlkLWNvbG9y/LWJhY2tncm91bmQt/d2l0aC1wb3V0LWZh/Y2UtZXhwcmVzc2lv/bi1waG90by5qcGc", nombre: "Sebastián León", account: "@SebasLeon", recomendacion: "El filete de pescado con arroz con coco es de otro nivel." }
     ];
 
-     const firstRow = clients.slice(0, 10);
+  const firstRow = clients.slice(0, 10);
   const secondRow = clients.slice(10, 20);
 
   const CardComponent = ({ client }) => (
-    <div className="w-72 flex flex-col bg-gray-100 border border-gray-300 rounded-lg px-1.5 py-1 flex-shrink-0">
+    <div className="w-72 flex flex-col bg-gray-100 border border-gray-300 rounded-lg px-1.5 py-1 flex-shrink-0 mr-8">
       <div className="flex items-center gap-3">
         <img className="w-14 h-14 rounded-full object-cover" src={client.img} alt={client.nombre} />
         <div className="flex flex-col">
@@ -39,36 +39,37 @@ export default function Client() {
   );
 
   return (
-    <div className="w-full bg-white py-8">
+    <div className="w-full bg-white py-8 overflow-hidden mt-32">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Testimonios de Clientes</h2>
+        <h2 className="titles text-4xl font-bold text-center mb-8">Testimonios de Clientes</h2>
         
         <div className="space-y-6">
           <div className="relative overflow-hidden">
             <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
-            
             <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
             
-            <div className="flex gap-8 animate-marquee">
-              {[...firstRow, ...firstRow, ...firstRow].map((client, index) => (
-                <CardComponent key={`${client.nombre}-${index}`} client={client} />
+            <div className="flex animate-scroll">
+              {[...firstRow, ...firstRow].map((client, index) => (
+                <CardComponent key={`first-${index}`} client={client} />
               ))}
             </div>
           </div>
 
           <div className="relative overflow-hidden">
             <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
-            
             <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
             
-            <div className="flex gap-8 animate-marquee-reverse">
-              {[...secondRow, ...secondRow, ...secondRow].map((client, index) => (
-                <CardComponent key={`${client.nombre}-${index}`} client={client} />
+            <div className="flex animate-scroll-reverse">
+              {[...secondRow, ...secondRow].map((client, index) => (
+                <CardComponent key={`second-${index}`} client={client} />
               ))}
             </div>
           </div>
         </div>
       </div>
+
     </div>
   );
-}
+};
+
+export default Clients;
