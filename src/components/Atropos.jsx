@@ -1,7 +1,6 @@
-// Componente AtroposCard.tsx
 import Atropos from 'atropos/react';
 import 'atropos/css';
-import ImgHero from '../assets/imgHero.png';
+import ImgHero from '/imgHero.png';
 
 export default function AtroposCard() {
   return (

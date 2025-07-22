@@ -1,5 +1,5 @@
 import { Link, Route, Routes } from 'react-router-dom';
-import logo from '../assets/icon.png';
+import logo from '/icon.png';
 import "../index.css"
 import ContainerReservation from './ContainerReservation';
 

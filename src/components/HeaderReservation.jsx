@@ -1,4 +1,4 @@
-import Logo from "../assets/icon.png";
+import Logo from "/icon.png";
 import { useState } from "react";
 import "../index.css"
 import { Link, Route, Routes } from "react-router-dom";
