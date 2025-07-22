@@ -1,0 +1,480 @@
+{
+    "platillos": [
+        {
+            "id": 1,
+            "nombre": "Bandeja Paisa",
+            "descripcion": "El plato más tradicional de Antioquia con frijoles, arroz, carne molida, chicharrón, chorizo, morcilla, huevo frito, patacón y aguacate",
+            "ingredientes": [
+                "frijoles rojos",
+                "arroz blanco",
+                "carne molida",
+                "chicharrón",
+                "chorizo",
+                "morcilla",
+                "huevo",
+                "plátano maduro",
+                "aguacate"
+            ],
+            "precio": 25000,
+            "categoria": "Platos principales",
+            "imagen": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "25-30 min",
+            "vegetariano": false,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 2,
+            "nombre": "Pollo Teriyaki",
+            "descripcion": "Pechuga de pollo jugosa bañada en salsa teriyaki, acompañada de arroz y verduras frescas",
+            "ingredientes": [
+                "pechuga de pollo",
+                "salsa teriyaki",
+                "arroz",
+                "verduras mixtas"
+            ],
+            "precio": 18500,
+            "categoria": "Platos principales",
+            "imagen": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "15-20 min",
+            "vegetariano": false,
+            "picante": false,
+            "especialidad": false
+        },
+        {
+            "id": 3,
+            "nombre": "Sancocho Trifásico",
+            "descripcion": "Tradicional sancocho paisa con tres carnes: pollo, cerdo y res, acompañado de yuca, plátano, mazorca y cilantro",
+            "ingredientes": [
+                "pollo",
+                "cerdo",
+                "res",
+                "yuca",
+                "plátano verde",
+                "mazorca",
+                "cilantro",
+                "guascas"
+            ],
+            "precio": 22000,
+            "categoria": "Platos principales",
+            "imagen": "https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "45-60 min",
+            "vegetariano": false,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 4,
+            "nombre": "Ajiaco Bogotano",
+            "descripcion": "Sopa tradicional bogotana con pollo, papa criolla, papa sabanera, papa pastusa, mazorca y guascas",
+            "ingredientes": [
+                "pollo",
+                "papa criolla",
+                "papa sabanera",
+                "papa pastusa",
+                "mazorca",
+                "guascas",
+                "crema de leche",
+                "alcaparras"
+            ],
+            "precio": 20000,
+            "categoria": "Sopas",
+            "imagen": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "40-50 min",
+            "vegetariano": false,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 22,
+            "nombre": "Frijoles",
+            "descripcion": "Sopa tradicional con Frijol, verduras y condimentos típicos colombianos",
+            "ingredientes": [
+                "frijoles",
+                "chicharrón",
+                "chorizo",
+                "carne de cerdo",
+                "huevo",
+                "aguacate",
+                "arroz",
+                "arepa"
+            ],
+            "precio": 23000,
+            "categoria": "Sopas",
+            "imagen": "https://images.unsplash.com/photo-1723693407562-bb4fcae76797?q=80&w=799&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "disponible": true,
+            "tiempo_preparacion": "60-90 min",
+            "vegetariano": false,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 5,
+            "nombre": "Mondongo",
+            "descripcion": "Sopa tradicional con panza de res, verduras y condimentos típicos colombianos",
+            "ingredientes": [
+                "panza de res",
+                "chorizo",
+                "morcilla",
+                "mazorca",
+                "yuca",
+                "plátano verde",
+                "cilantro"
+            ],
+            "precio": 18000,
+            "categoria": "Sopas",
+            "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "60-90 min",
+            "vegetariano": false,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 6,
+            "nombre": "Empanadas de Pollo",
+            "descripcion": "Empanadas doradas con relleno de pollo guisado, acompañadas de ají casero",
+            "ingredientes": [
+                "masa de maíz",
+                "pollo desmenuzado",
+                "papa",
+                "cebolla",
+                "ajo",
+                "comino"
+            ],
+            "precio": 3500,
+            "categoria": "Entradas",
+            "imagen": "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "10-15 min",
+            "vegetariano": false,
+            "picante": true,
+            "especialidad": false
+        },
+        {
+            "id": 7,
+            "nombre": "Empanadas de Carne",
+            "descripcion": "Empanadas tradicionales con relleno de carne de res guisada con papa y condimentos",
+            "ingredientes": [
+                "masa de maíz",
+                "carne de res",
+                "papa",
+                "cebolla",
+                "ajo",
+                "comino"
+            ],
+            "precio": 3500,
+            "categoria": "Entradas",
+            "imagen": "https://images.unsplash.com/photo-1601312354500-ba7e4c9d0e2c?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "10-15 min",
+            "vegetariano": false,
+            "picante": true,
+            "especialidad": false
+        },
+        {
+            "id": 8,
+            "nombre": "Patacones con Hogao",
+            "descripcion": "Plátano verde frito aplastado, acompañado de hogao (guiso de tomate y cebolla)",
+            "ingredientes": [
+                "plátano verde",
+                "tomate",
+                "cebolla",
+                "ajo",
+                "cilantro"
+            ],
+            "precio": 8000,
+            "categoria": "Entradas",
+            "imagen": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "10-15 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 9,
+            "nombre": "Arepa de Chócolo",
+            "descripcion": "Arepa dulce hecha con maíz tierno, perfecta como entrada o acompañamiento",
+            "ingredientes": [
+                "maíz tierno",
+                "leche",
+                "azúcar",
+                "sal",
+                "queso"
+            ],
+            "precio": 6000,
+            "categoria": "Entradas",
+            "imagen": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "15-20 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 10,
+            "nombre": "Buñuelos",
+            "descripcion": "Tradicionales buñuelos colombianos dorados y crujientes por fuera, suaves por dentro",
+            "ingredientes": [
+                "harina de trigo",
+                "huevos",
+                "queso",
+                "almidón de yuca"
+            ],
+            "precio": 2500,
+            "categoria": "Postres",
+            "imagen": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "15-20 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 11,
+            "nombre": "Natilla",
+            "descripcion": "Postre tradicional navideño colombiano cremoso y dulce",
+            "ingredientes": [
+                "leche",
+                "maicena",
+                "azúcar",
+                "canela",
+                "clavos de olor"
+            ],
+            "precio": 7000,
+            "categoria": "Postres",
+            "imagen": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "5-10 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 12,
+            "nombre": "Tres Leches",
+            "descripcion": "Delicioso pastel empapado en tres tipos de leche con cobertura de merengue",
+            "ingredientes": [
+                "bizcocho",
+                "leche condensada",
+                "leche evaporada",
+                "crema de leche",
+                "merengue"
+            ],
+            "precio": 9500,
+            "categoria": "Postres",
+            "imagen": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": false
+        },
+        {
+            "id": 13,
+            "nombre": "Flan de Coco",
+            "descripcion": "Cremoso flan casero con sabor a coco y caramelo",
+            "ingredientes": [
+                "leche de coco",
+                "huevos",
+                "azúcar",
+                "leche condensada"
+            ],
+            "precio": 8500,
+            "categoria": "Postres",
+            "imagen": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": false
+        },
+        {
+            "id": 14,
+            "nombre": "Limonada Natural",
+            "descripcion": "Refrescante limonada preparada con limón fresco, agua y panela",
+            "ingredientes": [
+                "limón",
+                "agua",
+                "panela",
+                "hielo"
+            ],
+            "precio": 4500,
+            "categoria": "Bebidas",
+            "imagen": "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "3-5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": false
+        },
+        {
+            "id": 15,
+            "nombre": "Limonada de Coco",
+            "descripcion": "Cremosa limonada con leche de coco, limón y un toque de panela",
+            "ingredientes": [
+                "limón",
+                "leche de coco",
+                "panela",
+                "hielo",
+                "coco rallado"
+            ],
+            "precio": 6500,
+            "categoria": "Bebidas",
+            "imagen": "https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "3-5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 16,
+            "nombre": "Limonada de Cereza",
+            "descripcion": "Exótica limonada con cereza natural, limón y panela",
+            "ingredientes": [
+                "limón",
+                "cerezas",
+                "panela",
+                "agua",
+                "hielo"
+            ],
+            "precio": 7000,
+            "categoria": "Bebidas",
+            "imagen": "https://images.unsplash.com/photo-1571197119270-6b347d92ea4e?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "3-5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": false
+        },
+        {
+            "id": 17,
+            "nombre": "Limonada de Hierbabuena",
+            "descripcion": "Refrescante limonada con hierbabuena fresca, perfecta para el clima cálido",
+            "ingredientes": [
+                "limón",
+                "hierbabuena",
+                "panela",
+                "agua",
+                "hielo"
+            ],
+            "precio": 5500,
+            "categoria": "Bebidas",
+            "imagen": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "3-5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": false
+        },
+        {
+            "id": 18,
+            "nombre": "Agua de Panela con Limón",
+            "descripcion": "Bebida tradicional colombiana caliente o fría con panela y limón",
+            "ingredientes": [
+                "panela",
+                "agua",
+                "limón",
+                "canela"
+            ],
+            "precio": 3500,
+            "categoria": "Bebidas",
+            "imagen": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "5-8 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 19,
+            "nombre": "Jugo de Lulo",
+            "descripcion": "Refrescante jugo de lulo natural, fruta típica colombiana con sabor agridulce",
+            "ingredientes": [
+                "lulo",
+                "agua",
+                "azúcar",
+                "hielo"
+            ],
+            "precio": 6000,
+            "categoria": "Bebidas",
+            "imagen": "https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "3-5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 20,
+            "nombre": "Jugo de Guanábana",
+            "descripcion": "Cremoso y dulce jugo de guanábana, perfecto para refrescarse",
+            "ingredientes": [
+                "guanábana",
+                "leche",
+                "azúcar",
+                "hielo"
+            ],
+            "precio": 7500,
+            "categoria": "Bebidas",
+            "imagen": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "3-5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        },
+        {
+            "id": 21,
+            "nombre": "Café Colombiano",
+            "descripción": "Auténtico café colombiano 100% arábica de las montañas de Antioquia",
+            "ingredientes": [
+                "café colombiano",
+                "agua"
+            ],
+            "precio": 3000,
+            "categoria": "Bebidas",
+            "imagen": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop&crop=center",
+            "disponible": true,
+            "tiempo_preparacion": "3-5 min",
+            "vegetariano": true,
+            "picante": false,
+            "especialidad": true
+        }
+    ],
+    "categorias": [
+        "Platos principales",
+        "Entradas",
+        "Sopas",
+        "Postres",
+        "Bebidas"
+    ],
+    "informacion_restaurante": {
+        "nombre": "Bite & Enjoy",
+        "descripcion": "Un lugar para los amantes gastronómicos - Especialidad en comida típica colombiana",
+        "telefono": "+57 300 123 4567",
+        "email": "info@biteenjoy.com",
+        "direccion": "Medellín, Antioquia, Colombia",
+        "horarios": {
+            "lunes_viernes": "8:00 AM - 10:00 PM",
+            "sabado_domingo": "9:00 AM - 11:00 PM"
+        },
+        "redes_sociales": {
+            "instagram": "@biteenjoy",
+            "facebook": "Bite & Enjoy Restaurant",
+            "whatsapp": "+57 300 123 4567"
+        },
+        "servicios": [
+            "Servicio a domicilio",
+            "Reservas",
+            "Eventos privados",
+            "Comida para llevar"
+        ]
+    }
+}
