@@ -39,9 +39,9 @@ const Clients = () => {
   );
 
   return (
-    <div className="w-full bg-white py-8 overflow-hidden mt-32">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="titles text-4xl font-bold text-center mb-8">Testimonios de Clientes</h2>
+    <div className="w-full bg-white py-8 overflow-hidden clients">
+      <div className="max-w-7xl mx-auto px-4 mt-20 mb-20">
+        <h2 className="titles text-4xl font-bold text-center mb-16">Testimonios de Clientes</h2>
         
         <div className="space-y-6">
           <div className="relative overflow-hidden">

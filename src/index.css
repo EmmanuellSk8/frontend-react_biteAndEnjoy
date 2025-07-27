@@ -139,21 +139,16 @@ body {
   background-position: center;
 }
 
+.clients{
+  background-image: url('/bgs/bgPostHero.png');
+  background-size: contain;
+  background-position: center;  clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 75.8%, 80.1% 100%, 20% 100%, 0% 78.3%, 0% 15%);
+}
+
 @media screen and (max-width:1227px) {
   #Hero {
-    margin-left: 10rem;
-  }
-}
-
-@media screen and (max-width:900px) {
-  #Hero {
-    margin-left: 5rem;
-  }
-}
-
-@media screen and (max-width:790px) {
-  #Hero {
-    margin-left: 2rem;
+    margin-top: 6rem;
+    padding-inline: 3rem;
   }
 }
 
@@ -262,6 +257,18 @@ input:focus {
   background-position: center;
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.bgMenu{
+  background-image: url('/bgs/bgMenu.png');
+  background-size: contain;
+  background-position: center;
+}
+
+.bgMinMenu{
+  background-image: url('/bgs/bgMinMenu.png');
+  background-size: contain;
+  background-position: center;
 }
 
 Html {
