@@ -21,10 +21,11 @@ export default function Calendar() {
         <LocalizationProvider
             dateAdapter={AdapterDayjs}
             adapterLocale="es"
-            localeText={esES.components.MuiLocalizationProvider.defaultProps.localeText}>
+            localeText={esES.components.MuiLocalizationProvider.defaultProps.localeText}
+        >
 
             <MobileDateTimePicker
-            ampm={true}
+                ampm={true}
                 label="Selecciona una fecha 📆"
                 value={value}
                 onChange={setValue}
@@ -32,8 +33,9 @@ export default function Calendar() {
                 maxDate={maxDate}
                 minTime={minTime}
                 maxTime={maxTime}
-                minutesStep={30}
+                minutesStep={0}
                 localeText={"es"}
+                className='bg-white hidden'
             />
         </LocalizationProvider>
     );

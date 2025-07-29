@@ -1,21 +1,36 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function DeleteReservation() {
-    const id = "idDeprueba"
+    const [clave, setClave] = useState("")
+    const [cedula, setCedula] = useState("")
+    const [error, setError] = useState(false)
 
     const deleteModal = useRef(null)
     const confirmDeleteModal = useRef(null)
     const overlay = useRef(null)
 
-    const openModal = () => {
-        if (deleteModal.current) {
-            deleteModal.current.showModal();
-        }
+    const now = new Date()
+    const date = now.toLocaleString("es", "ES")
+    const name = "Emmanuel Guerra"
+    const Mockcedula = 123
+    const Mockclave = "as"
 
-        if (overlay.current) {
-            overlay.current.classList.add("active")
+    const handleConfirmation = (e) => {
+        e.preventDefault();
+
+        if (cedula == Mockcedula && clave == String(Mockclave)) {
+            if (deleteModal.current) {
+                deleteModal.current.showModal();
+            }
+
+            if (overlay.current) {
+                overlay.current.classList.add("active")
+            }
+        } else {
+            setError(true)
+            console.log("clave o cédula errónea");
         }
-    };
+    }
 
     const closeModal = () => {
         if (deleteModal.current) {
@@ -73,18 +88,28 @@ export default function DeleteReservation() {
 
     return (
         <>
-            <section className="flex flex-col gap-10 mt-40 justify-around">
+            <section className="flex flex-col gap-10 mt-40 justify-around mx-2">
                 <h2 className="titles text-4xl font-semibold text-center">Eliminar reserva</h2>
 
                 <div className="flex gap-2 flex-col">
-                    <form action="" method="post" className="flex flex-wrap max-w-[608px] gap-x-2 gap-y-4">
-                        <input type="text" className="cursor-pointer border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl w-full" placeholder="Cédula" required />
-                        <input type="tel" className="w-full cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Clave privada" required title="La clave privada fue enviada al correo" />
+                    <form method="post" className="flex flex-wrap max-w-[608px] gap-x-2 gap-y-4">
+                        <input
+                            value={cedula}
+                            onChange={(e) => setCedula(e.target.value)}
+                            maxLength={15}
+                            type="text" className="cursor-pointer border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl w-full" placeholder="Cédula" required />
+                        <input
+                            value={clave}
+                            onChange={(e) => setClave(e.target.value)}
+                            maxLength={30}
+                            type="text" className="w-full cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Clave privada" required title="La clave privada fue enviada al correo" />
                     </form>
-
+                    {error &&
+                        <p className="text-red-500 font-semibold text-md text-center">La cédula o la clave es erronea</p>
+                    }
                     <div className="container-btns-reservation flex justify-center px-6 mt-4 flex-wrap gap-2">
                         <a
-                            onClick={openModal}
+                            onClick={handleConfirmation}
                             className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
                             Eliminar reserva</a>
                     </div>
@@ -96,11 +121,17 @@ export default function DeleteReservation() {
                 className="overflow-x-hidden px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg justify-center"
                 ref={deleteModal}
                 id="ModalDelete">
-                <div class="absolute h-full w-full bg-white"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
-                
+
+                <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#FDF6E7,transparent)]"></div></div>
                 <div className="text-center gap-2 flex-col flex mb-16">
-                    <p className="text-2xl">Se encontró una reserva asociada al id: {id}</p>
-                    <p className="text-2xl">¿Desea eliminarla?</p>
+                    <div className="flex w-full justify-center">
+                        <div className="rounded-full bg-orange-200 size-fit p-4">
+                            <img src="/iconCalendar.png" className="size-14" />
+                        </div>
+                    </div>
+                    <p className="text-3xl font-semibold mb-2">Reserva encontrada</p>
+                    <p className="text-xl">Estimado/a {name}, hemos encontrado una reserva para el día y hora: <strong>{date}</strong></p>
+                    <p className="text-xl">¿Desea eliminarla?</p>
                 </div>
 
                 <div className="container-btns-delete flex justify-center w-full mt-5 px-20 flex-nowrap gap-4">
@@ -123,8 +154,15 @@ export default function DeleteReservation() {
                 ref={confirmDeleteModal}
                 className="overflow-x-hidden px-10 py-20 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg"
                 id="confirmDelete">
+                <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#FDF6E7,transparent)]"></div></div>
                 <div className="text-center gap-2 flex-col flex mb-16">
-                    <p className="text-2xl">¿Está seguro que <span className="text-red-600 font-semibold">desea eliminar la reserva</span> asociada al id: {id}?</p>
+                    <div className="flex w-full justify-center">
+                        <div className="rounded-full bg-orange-200 size-fit p-4">
+                            <img src="/iconCalendar.png" className="size-14" />
+                        </div>
+                    </div>
+                    <p className="text-3xl font-semibold mb-2">Reserva encontrada</p>
+                    <p className="text-2xl">Estimado/a {name}, ¿Está seguro que <span className="text-red-600 font-semibold">desea eliminar la reserva</span> para el día y hora: <strong>{date}</strong>?</p>
                     <p className="text-2xl">¿Desea eliminarla?</p>
                 </div>
 

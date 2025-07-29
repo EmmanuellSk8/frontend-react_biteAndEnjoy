@@ -124,32 +124,24 @@ body {
 #Hero {
   font-family: 'Shrikhand', system-ui;
   font-weight: 800;
-}
-
-#Hero .bgHero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -50;
   background-image: url('/bgs/bgHero.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.clients{
-  background-image: url('/bgs/bgPostHero.png');
-  background-size: contain;
-  background-position: center;  clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 75.8%, 80.1% 100%, 20% 100%, 0% 78.3%, 0% 15%);
+.bgReservation{
+  background-image: url('/bgs/tes.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-@media screen and (max-width:1227px) {
-  #Hero {
-    margin-top: 6rem;
-    padding-inline: 3rem;
-  }
+.clients {
+  display: block;
+  background-image: url('/bgs/bgClients.png');
+  background-size: 100% auto;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 75.8%, 80.1% 100%, 20% 100%, 0% 78.3%, 0% 15%);
 }
 
 @media screen and (max-width:630px) {
@@ -212,42 +204,14 @@ input:focus {
   outline: rgb(40, 40, 40);
 }
 
-@media screen and (max-width:670px) {
-  #Hero #bigImg {
-    margin-top: 2rem;
-    width: 300px;
-  }
-
-  #Hero #bgImgsHero {
-    width: 400px;
-  }
-
-  #Hero #bgImgsHero {
-    width: 400px;
-  }
-
-  #textHero,
-  #postHero {
-    margin-inline: 1rem;
-  }
-
-  #Hero {
-    margin-bottom: 10rem;
-  }
-}
 
 @media screen and (max-width:460px) {
   #container-imgs-hero {
-    margin-top: 4rem;
-    display: grid;
+    display: block;
   }
 
   #bgImgsHero {
     display: none;
-  }
-
-  #Hero {
-    margin-left: .5rem;
   }
 }
 
@@ -255,17 +219,16 @@ input:focus {
   background-image: url('/bgs/bgPostHero.png');
   background-size: contain;
   background-position: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+
 }
 
-.bgMenu{
+.bgMenu {
   background-image: url('/bgs/bgMenu.png');
   background-size: contain;
   background-position: center;
 }
 
-.bgMinMenu{
+.bgMinMenu {
   background-image: url('/bgs/bgMinMenu.png');
   background-size: contain;
   background-position: center;
@@ -345,4 +308,96 @@ Html::-webkit-scrollbar-thumb:hover {
 .animate-scroll:hover,
 .animate-scroll-reverse:hover {
   animation-play-state: paused;
+}
+
+.bgBodyHomePage {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  background-image: url('/bgs/bgAboutUs.png');
+  background-position: center;
+  z-index: -10;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.slot.top {
+  height: 300px;
+}
+
+.middle {
+  height: 250px;
+  display: flex;
+  gap: 10px;
+}
+
+.slot.middle-left {
+  height: 100%;
+  flex: 1;
+}
+
+.slot.middle-right {
+  height: 100%;
+  flex: 2;
+}
+
+.slot.bottom {
+  height: 250px;
+}
+
+.slot {
+  border-radius: 10px;
+}
+
+.slot[data-swapy-highlighted] {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.item:has(.handle) {
+  position: relative;
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    gap: 2rem;
+  }
+
+  .container .slot.bottom,
+  .slot.middle-left,
+  .slot.middle-right,
+  .slot.top {
+    height: 300px;
+  }
+
+  .middle {
+    height: fit-content;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
 }

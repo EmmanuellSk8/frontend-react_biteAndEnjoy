@@ -8,7 +8,7 @@ export default function ContainerMenu() {
 
   return (
     <>
-      <section className='bgMenu w-full flex justify-center'>
+      <section id='Menu' className='bgMenu w-full flex justify-center'>
         <div className="bgMinMenu w-[1600px] flex justify-center my-40 rounded-xl mx-10">
           <div className="w-full flex flex-wrap p-10">
 

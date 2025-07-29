@@ -3,10 +3,10 @@ import Header from '../components/Header';
 import ReservationHeader from '../components/HeaderReservation';
 import ContainerMenu from '../components/ContainerMenu';
 import Footer from '../components/Footer';
-import About from '../components/About';
 import Clients from '../components/Clients';
 import PostHero from '../components/PostHero';
 import Hero from '../components/Hero';
+import AboutUs from '../components/AboutUs';
 
 function HomePage() {
 
@@ -14,13 +14,14 @@ function HomePage() {
   const isReservationsPath = location.pathname.startsWith("/Reservations")
 
   return (
-    <section className='w-full justify-center items-center flex flex-col'>
+    <section className='w-full justify-center items-center flex flex-col bodyHomePage'>
       {!isReservationsPath ? <Header /> : <ReservationHeader />}
+      <div className="bgBodyHomePage"></div>
       <Hero />
       <PostHero />
       <ContainerMenu />
       <Clients />
-      <About />
+      <AboutUs />
       <Footer />
     </section>
   );
