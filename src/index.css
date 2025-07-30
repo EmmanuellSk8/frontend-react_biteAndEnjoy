@@ -5,6 +5,27 @@
   overflow-x: hidden;
 }
 
+Html {
+  overflow: auto;
+}
+
+Html::-webkit-scrollbar {
+  width: 13px;
+}
+
+Html::-webkit-scrollbar-track {
+  background: #444040;
+}
+
+Html::-webkit-scrollbar-thumb {
+  background: #FE9A00;
+  border-radius: 10px;
+}
+
+Html::-webkit-scrollbar-thumb:hover {
+  background: #d59638;
+}
+
 body {
   transition: 700ms;
 }
@@ -12,37 +33,6 @@ body {
 .txt-transparent-hero {
   -webkit-text-stroke-width: 2.4px;
   -webkit-text-stroke-color: black;
-}
-
-@media screen and (max-width:342px) {
-  .container-btns-reservation {
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width:440px) {
-  .container-btns-delete {
-    width: 100%;
-    justify-content: center;
-  }
-
-  #ModalDelete p {
-    width: 100%;
-  }
-
-  #ModalDelete {
-    width: 100%;
-  }
-}
-
-@keyframes menuMobile {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
 }
 
 #menuMobile {
@@ -53,26 +43,6 @@ body {
 #menuMobileReservations {
   animation: menuMobile 0.4s ease-in-out;
   display: none;
-}
-
-@media screen and (max-width:1056px) {
-  #menuMobileReservations {
-    display: flex;
-  }
-
-  #menuReservations {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #menuMobile {
-    display: flex;
-  }
-
-  #menu {
-    display: none;
-  }
 }
 
 #overlay {
@@ -86,12 +56,6 @@ body {
 
 #overlay.active {
   display: block;
-}
-
-@media screen and (max-width: 1440px) {
-  .headerReservation {
-    column-gap: 4rem;
-  }
 }
 
 .btns-hero-menu .svgMenu,
@@ -121,15 +85,6 @@ body {
   font-family: 'Shrikhand', system-ui;
 }
 
-@keyframes Hero {
-  from{
-    opacity: 0;
-  }
-   to{
-    opacity: 1;
-  }
-}
-
 #Hero {
   animation: Hero linear .7s;
   font-family: 'Shrikhand', system-ui;
@@ -145,43 +100,6 @@ body {
   background-image: url('/bgs/bgClients.png');
   background-size: 100% auto;
   clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 100% 75.8%, 80.1% 100%, 20% 100%, 0% 78.3%, 0% 15%);
-}
-
-@media screen and (max-width:630px) {
-  input {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:1170px) {
-  .header {
-    column-gap: 4rem;
-  }
-
-  .labelResponsive {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:1040px) {
-  #containerCalendar {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    gap: 12px;
-  }
-
-  #ButtonCalendar {
-    width: 100%;
-    display: flex;
-  }
-
-  #date-input {
-    width: 100%;
-    display: flex;
-  }
 }
 
 #ButtonCalendar:hover {
@@ -207,22 +125,10 @@ input:focus {
   outline: rgb(40, 40, 40);
 }
 
-
-@media screen and (max-width:460px) {
-  #container-imgs-hero {
-    display: block;
-  }
-
-  #bgImgsHero {
-    display: none;
-  }
-}
-
 #postHero {
   background-image: url('/bgs/bgPostHero.png');
   background-size: contain;
   background-position: center;
-
 }
 
 .bgMenu {
@@ -235,69 +141,6 @@ input:focus {
   background-image: url('/bgs/bgMinMenu.png');
   background-size: contain;
   background-position: center;
-}
-
-Html {
-  overflow: auto;
-}
-
-Html::-webkit-scrollbar {
-  width: 13px;
-}
-
-Html::-webkit-scrollbar-track {
-  background: #444040;
-}
-
-Html::-webkit-scrollbar-thumb {
-  background: #FE9A00;
-  border-radius: 10px;
-}
-
-Html::-webkit-scrollbar-thumb:hover {
-  background: #d59638;
-}
-
-@media screen and (max-width:370px) {
-  .containerCreateReservation {
-    width: 280px;
-    margin-right: 12px;
-    margin-inline: 0;
-  }
-
-  .container-btns-reservation {
-    margin-left: -1rem;
-  }
-
-  .container-btns-delete {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 510px) {
-  .modalUpdateReservation {
-    width: 100%;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(calc(-320px * 10));
-  }
-}
-
-@keyframes scroll-reverse {
-  0% {
-    transform: translateX(calc(-320px * 10));
-  }
-
-  100% {
-    transform: translateX(0);
-  }
 }
 
 .animate-scroll {
@@ -382,6 +225,52 @@ Html::-webkit-scrollbar-thumb:hover {
   position: relative;
 }
 
+@keyframes Hero {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-320px * 10));
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(calc(-320px * 10));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes menuMobile {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .headerReservation {
+    column-gap: 4rem;
+  }
+}
+
 @media screen and (max-width: 920px) {
   .container {
     width: 100%;
@@ -402,5 +291,114 @@ Html::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
     gap: 2rem;
   }
+}
 
+@media screen and (max-width:342px) {
+  .container-btns-reservation {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:440px) {
+  .container-btns-delete {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #ModalDelete p {
+    width: 100%;
+  }
+
+  #ModalDelete {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:370px) {
+  .containerCreateReservation {
+    width: 280px;
+    margin-right: 12px;
+    margin-inline: 0;
+  }
+
+  .container-btns-reservation {
+    margin-left: -1rem;
+  }
+
+  .container-btns-delete {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .modalUpdateReservation {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:460px) {
+  #container-imgs-hero {
+    display: block;
+  }
+
+  #bgImgsHero {
+    display: none;
+  }
+}
+
+@media screen and (max-width:630px) {
+  input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1170px) {
+  .header {
+    column-gap: 4rem;
+  }
+
+  .labelResponsive {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1040px) {
+  #containerCalendar {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 12px;
+  }
+
+  #ButtonCalendar {
+    width: 100%;
+    display: flex;
+  }
+
+  #date-input {
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media screen and (max-width:1056px) {
+  #menuMobileReservations {
+    display: flex;
+  }
+
+  #menuReservations {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #menuMobile {
+    display: flex;
+  }
+
+  #menu {
+    display: none;
+  }
 }
