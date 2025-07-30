@@ -38,7 +38,7 @@ const CardReservation = ({ name, email, cedula, telefono, Npersonas, fecha }: Ca
                 </div>
                 <div className="border-1 border-gray-300 mt-2"></div>
                 <div className="w-full flex justify-between">
-                    <p className="text-gray-600">Fehcha y hora</p>
+                    <p className="text-gray-600">Fecha y hora</p>
                     <p>{fecha}</p>
                 </div>
 
