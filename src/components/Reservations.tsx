@@ -5,6 +5,7 @@ import { CircleQuestionMark, User2 } from "lucide-react";
 import { CardReservationProps } from "../types/CardReservationProps";
 import { HeaderReservation } from "./Headers";
 import Footer from "./Footer";
+import Swal from 'sweetalert2'
 
 const CardReservation = ({ name, email, cedula, telefono, Npersonas, fecha }: CardReservationProps) => {
     return (
@@ -47,6 +48,18 @@ const CardReservation = ({ name, email, cedula, telefono, Npersonas, fecha }: Ca
 }
 
 function GetReservation() {
+    const [showAlert, setShowAlert] = useState(false)
+    const now = new Date()
+    const date = now.toLocaleString("es")
+
+    const handleAlert = () => {
+        setShowAlert(prev => !prev)
+        Swal.fire({
+            title: "Reserva(s) encontrada(s)!",
+            text:  `Se han encontrado reserva(s)!`,
+            icon: "success"
+        });
+    }
 
     return (
         <>
@@ -63,7 +76,9 @@ function GetReservation() {
                                 type="text" className="cursor-pointer  border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl w-full" placeholder="Cédula" required />
                         </form>
                         <div className="flex justify-center px-6 mt-4">
-                            <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
+                            <a
+                            onClick={handleAlert}
+                            className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
                                 Consultar reservas</a>
 
                         </div>
@@ -85,7 +100,19 @@ function GetReservation() {
 }
 
 function CreateReservation() {
+    const [showAlert, setShowAlert] = useState(false)
     const [peopleCount, setPeopleCount] = useState("")
+    const now = new Date()
+    const date = now.toLocaleString("es")
+
+    const handleAlert = () => {
+        setShowAlert(prev => !prev)
+        Swal.fire({
+            title: "Reserva creada!",
+            text: `Creaste tu reserva para el día y hora: ${date}!`,
+            icon: "success"
+        });
+    }
 
     const HandleNumberDiners = (e) => {
         const value = e.target.value;
@@ -107,22 +134,22 @@ function CreateReservation() {
                         <label className="flex flex-col w-full">
                             <span className="text-lg font-semibold mb-2">Nombre</span>
                             <input
-                            maxLength={50}
-                            type="text" className="cursor-pointer  border-gray-800 border bg-white flex px-4 py-2 rounded-lg w-full" />
+                                maxLength={50}
+                                type="text" className="cursor-pointer  border-gray-800 border bg-white flex px-4 py-2 rounded-lg w-full" />
                         </label>
 
                         <label className="flex flex-col w-full">
                             <span className="text-lg font-semibold mb-2">Teléfono</span>
                             <input
-                            maxLength={15}
-                            type="tel" className="cursor-pointer border border-gray-800 bg-white flex px-4 py-2 rounded-lg" />
+                                maxLength={15}
+                                type="tel" className="cursor-pointer border border-gray-800 bg-white flex px-4 py-2 rounded-lg" />
                         </label>
 
                         <label className="labelResponsive">
                             <span className="text-lg font-semibold">Cédula</span>
                             <input
-                            maxLength={15}
-                            type="tel" className="mt-2 cursor-pointer  border-gray-800 border bg-white flex px-4 py-2 rounded-lg" />
+                                maxLength={15}
+                                type="tel" className="mt-2 cursor-pointer  border-gray-800 border bg-white flex px-4 py-2 rounded-lg" />
                         </label>
 
                         <label className="labelResponsive">
@@ -138,8 +165,8 @@ function CreateReservation() {
                         <label className="flex flex-col w-full">
                             <span className="text-lg font-semibold mb-2">Email</span>
                             <input
-                            maxLength={70}
-                            type="email" className="cursor-pointer  border-gray-800 border bg-white flex px-4 py-2 rounded-lg" required />
+                                maxLength={70}
+                                type="email" className="cursor-pointer  border-gray-800 border bg-white flex px-4 py-2 rounded-lg" required />
                         </label>
 
                         <label className="w-full flex flex-col">
@@ -150,7 +177,9 @@ function CreateReservation() {
                     </form>
 
                     <div className="container-btns-reservation flex justify-center px-6 mt-4 flex-nowrap gap-2">
-                        <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
+                        <a
+                            onClick={handleAlert}
+                            className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
                             Reservar</a>
                     </div>
                 </div>
@@ -166,11 +195,23 @@ function UpdateReservation() {
     const [showUpdateForm, setShowUpdateForm] = useState(false)
     const [error, setError] = useState(false)
     const [message, setMessage] = useState(false)
+    const [showAlert, setShowAlert] = useState(false)
 
+    const now = new Date()
+    const date = now.toLocaleString("es")
     const Mockcedula = "123"
     const Mockclave = "as"
 
-    const handleCedula = (e) => {
+    const handleAlert = () => {
+        setShowAlert(prev => !prev)
+        Swal.fire({
+            title: "Reserva actualizada!",
+            text: `Actualizaste tu reserva para el día y hora: ${date}!`,
+            icon: "success"
+        });
+    }
+
+    const handleSecurity = (e) => {
         e.preventDefault();
 
         if (cedula == Mockcedula && clave == String(Mockclave)) {
@@ -250,8 +291,10 @@ function UpdateReservation() {
                         </form>
 
                         <div className="container-btns-reservation flex justify-center px-6 mt-4 flex-nowrap gap-2">
-                            <a className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
-                                Reservar</a>
+                            <a
+                                onClick={handleAlert}
+                                className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
+                                Actualizar reserva</a>
                         </div>
                     </div>
                 </section>
@@ -291,7 +334,7 @@ function UpdateReservation() {
 
                             <div className="container-btns-reservation w-full flex justify-center px-6 mt-4 flex-wrap gap-2">
                                 <button
-                                    onClick={handleCedula}
+                                    onClick={handleSecurity}
                                     className="border-6 border-double bg-amber-500 px-8 py-2 rounded-xl hover:bg-amber-500 cursor-pointer hover:scale-105 ease-in-out duration-300   font-bold">
                                     Actualizar reserva</button>
                             </div>
@@ -308,6 +351,7 @@ function DeleteReservation() {
     const [clave, setClave] = useState("")
     const [cedula, setCedula] = useState("")
     const [error, setError] = useState(false)
+    const [showAlert, setShowAlert] = useState(false)
 
     const deleteModal = useRef<HTMLDialogElement>(null)
     const confirmDeleteModal = useRef<HTMLDialogElement>(null)
@@ -318,6 +362,22 @@ function DeleteReservation() {
     const name = "Emmanuel Guerra"
     const Mockcedula = "123"
     const Mockclave = "as"
+
+    const handleAlert = () => {
+        setShowAlert(prev => !prev)
+        Swal.fire({
+            title: "Reserva Eliminada!",
+            text: `Eliminaste tu reserva para el día y hora: ${date}!`,
+            icon: "success"
+        });
+         if (confirmDeleteModal.current) {
+            confirmDeleteModal.current.close();
+        }
+
+        if (overlay.current) {
+            overlay.current.classList.remove("active")
+        }
+    }
 
     const handleConfirmation = (e) => {
         e.preventDefault();
@@ -470,6 +530,7 @@ function DeleteReservation() {
 
                 <div className="container-btns-delete flex justify-center w-full mt-5 px-20 flex-nowrap gap-4">
                     <button
+                    onClick={handleAlert}
                         className="w-[140px] border-2 border-black bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-red-700/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl text-nowrap"
                     >Sí, eliminar</button>
 
@@ -488,18 +549,18 @@ function DeleteReservation() {
 }
 
 export default function ContainerReservation() {
-  return (
-    <>
-      <div className="flex flex-col min-h-screen">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <HeaderReservation />
-        <main className="flex-grow">
-        </main>
-        <Footer />
-      </div>
-    </>
+    return (
+        <>
+            <div className="flex flex-col min-h-screen">
+                <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <HeaderReservation />
+                <main className="flex-grow">
+                </main>
+                <Footer />
+            </div>
+        </>
 
-  );
+    );
 }
 
 export { GetReservation, CreateReservation, UpdateReservation, DeleteReservation }
