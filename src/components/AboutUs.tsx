@@ -72,9 +72,7 @@ function AboutUs() {
                                 <p className="mt-2 text-gray-900 font-semibold text-lg">Ven a probar la mejor sazón.</p>
                                 <p className="mt-2 text-orange-500 font-medium text-s">Medellín, antioquia, Colombia.</p>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
 

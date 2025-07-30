@@ -1,7 +1,7 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import logo from '/icon.png';
 import "../index.css"
-import ContainerReservation from './ContainerReservation';
+import ContainerReservation from './Reservations';
 
 export default function Footer() {
 
@@ -29,7 +29,6 @@ export default function Footer() {
                             <li>
                                 <a href="#About" className="hover:text-orange-400 hover:scale-110 duration-200 ease-in-out me-4 md:me-6">Acerca de nosotros</a>
                             </li>
-
                         </ul>
                     </div>
                     <hr className="my-6 border-gray-200 sm:mx-aut lg:my-8" />

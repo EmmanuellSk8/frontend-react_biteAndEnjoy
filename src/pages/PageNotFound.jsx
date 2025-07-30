@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import AtroposCard from "../components/Atropos";
+import { AtroposCard } from "../components/Hero";
 
 export default function PageNotFound() {
     return (

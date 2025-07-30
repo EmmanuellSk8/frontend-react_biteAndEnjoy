@@ -130,13 +130,6 @@ body {
   background-position: center;
 }
 
-.bgReservation{
-  background-image: url('/bgs/tes.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 .clients {
   display: block;
   background-image: url('/bgs/bgClients.png');

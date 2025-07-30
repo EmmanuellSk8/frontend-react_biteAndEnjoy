@@ -1,8 +1,8 @@
 import { Navigate } from 'react-router-dom';
-import ContainerReservation from './components/ContainerReservation';
 import { Route, Routes } from "react-router-dom";
 import PageNotFound from './pages/PageNotFound';
 import HomePage from './pages/Homepage';
+import ContainerReservation from './components/Reservations';
 
 function App() {
 

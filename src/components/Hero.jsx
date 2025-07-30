@@ -1,12 +1,30 @@
 import postreHero from '/postreHero.png';
 import Bg from '/bgs/bg-imgs-hero.png';
 import { Link, Route, Routes } from 'react-router-dom';
-import ContainerReservation from './ContainerReservation';
-import AtroposCard from './Atropos';
 import "../index.css"
 import {ChevronsRight } from 'lucide-react';
+import Atropos from 'atropos/react';
+import 'atropos/css';
+import ImgHero from '/imgHero.png';
+import ContainerReservation from './Reservations';
 
-export default function Hero() {
+function AtroposCard() {
+  return (
+    <Atropos
+      shadowOffset={50}
+      shadow={false}
+    >
+      <img
+        src={ImgHero}
+        alt="Plato"
+        data-atropos-offset="5"
+        style={{ width: '100%', borderRadius: '0.5rem' }}
+      />   
+    </Atropos>
+  );
+}
+
+function Hero() {
 
     return (
         <>
@@ -52,3 +70,5 @@ export default function Hero() {
         </>
     )
 }
+
+export { Hero, AtroposCard}
