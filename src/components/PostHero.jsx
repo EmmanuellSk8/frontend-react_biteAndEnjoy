@@ -4,7 +4,7 @@ export default function PostHero() {
             <div className="flex flex-col justify-around gap-2 shadow-2xl py-10 bg-white rounded-4xl px-14 max-[450px]:w-full max-[450px]:px-4">
 
                 <div className="flex flex-row gap-10 w-full max-[960px]:flex-wrap justify-center">
-                    <img className="max-w-96 rounded-4xl max-[450px]:w-72" src="https://visitarmedellin.com/wp-content/uploads/2023/07/Al-Alma-Cafe.jpg" alt="" />
+                    <img className="PostHeroTop max-w-96 rounded-4xl max-[450px]:w-72" src="https://visitarmedellin.com/wp-content/uploads/2023/07/Al-Alma-Cafe.jpg" alt="" />
 
                     <div className="gap-10 flex flex-col mt-10">
                         <h2 className="text-3xl text-blue-400 font-semibold titles">Brindamos experiencias únicas</h2>
@@ -12,7 +12,7 @@ export default function PostHero() {
                     </div>
                 </div>
 
-                <div className="flex flex-row gap-10 w-full max-[960px]:flex-wrap justify-center">
+                <div className="PostHeroBottom flex flex-row gap-10 w-full max-[960px]:flex-wrap justify-center">
                     <div className="gap-10 flex flex-col mt-10">
                         <h2 className="text-3xl text-blue-400 font-semibold titles">Espacios únicos</h2>
                         <p className="text-xl txt-postHero max-w-[600px]">Más que un restaurante, somos un destino donde la calidez y el buen gusto se fusionan. Nuestros espacios están diseñados para que vivas momentos especiales, ya sea en una cena íntima o una reunión con amigos. La atmósfera perfecta para disfrutar de una experiencia auténtica.</p>
