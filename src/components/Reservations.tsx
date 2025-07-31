@@ -56,7 +56,7 @@ function GetReservation() {
         setShowAlert(prev => !prev)
         Swal.fire({
             title: "Reserva(s) encontrada(s)!",
-            text:  `Se han encontrado reserva(s)!`,
+            text: `Se han encontrado reserva(s)!`,
             icon: "success"
         });
     }
@@ -77,8 +77,8 @@ function GetReservation() {
                         </form>
                         <div className="flex justify-center px-6 mt-4">
                             <a
-                            onClick={handleAlert}
-                            className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
+                                onClick={handleAlert}
+                                className="border-6 border-double bg-amber-500 px-8 py-1.5 rounded-xl cursor-pointer hover:scale-105 ease-in-out duration-300 font-bold">
                                 Consultar reservas</a>
 
                         </div>
@@ -321,7 +321,6 @@ function UpdateReservation() {
                                     onChange={(e) => setClave(e.target.value)}
                                     maxLength={30}
                                     type="text" className="w-full cursor-pointer border border-gray-800 bg-white flex px-4 py-2 rounded-2xl" placeholder="Clave privada" required title="La clave privada fue enviada al correo" />
-
                                 <p
                                     style={{ display: message ? 'block' : 'none' }}
                                     id="message" className="w-fit px-4 py-2 font-semibold absolute top-0 right-0 mr-8 text-gray-600">La clave privada fue enviada al correo</p>
@@ -352,6 +351,7 @@ function DeleteReservation() {
     const [cedula, setCedula] = useState("")
     const [error, setError] = useState(false)
     const [showAlert, setShowAlert] = useState(false)
+    const [message, setMessage] = useState(false)
 
     const deleteModal = useRef<HTMLDialogElement>(null)
     const confirmDeleteModal = useRef<HTMLDialogElement>(null)
@@ -363,6 +363,13 @@ function DeleteReservation() {
     const Mockcedula = "123"
     const Mockclave = "as"
 
+    const handleMessage = () => {
+        setMessage(prev => !prev);
+        setTimeout(() => {
+            setMessage(false);
+        }, 8000)
+    }
+
     const handleAlert = () => {
         setShowAlert(prev => !prev)
         Swal.fire({
@@ -370,7 +377,7 @@ function DeleteReservation() {
             text: `Eliminaste tu reserva para el día y hora: ${date}!`,
             icon: "success"
         });
-         if (confirmDeleteModal.current) {
+        if (confirmDeleteModal.current) {
             confirmDeleteModal.current.close();
         }
 
@@ -461,12 +468,21 @@ function DeleteReservation() {
                             value={cedula}
                             onChange={(e) => setCedula(e.target.value)}
                             maxLength={15}
-                            type="text" className="cursor-pointer border-gray-800 border bg-gray-50/40 flex px-4 py-2 rounded-2xl w-full" placeholder="Cédula" required />
-                        <input
-                            value={clave}
-                            onChange={(e) => setClave(e.target.value)}
-                            maxLength={30}
-                            type="text" className="w-full cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Clave privada" required title="La clave privada fue enviada al correo" />
+                            type="text" className="cursor-pointer border-gray-800 border bg-gray-50/40 flex px-4 
+                            py-2 rounded-2xl w-full" placeholder="Cédula" required />
+                        <label className="w-full relative">
+                            <CircleQuestionMark
+                                onClick={handleMessage}
+                                className="absolute right-0 mt-2 mr-4 cursor-pointer" />
+                            <input
+                                value={clave}
+                                onChange={(e) => setClave(e.target.value)}
+                                maxLength={30}
+                                type="text" className="w-full cursor-pointer border border-gray-800 bg-gray-50/40 flex px-4 py-2 rounded-2xl" placeholder="Clave privada" required title="La clave privada fue enviada al correo" />
+                            <p
+                                style={{ display: message ? 'block' : 'none' }}
+                                id="message" className="w-fit px-4 py-2 font-semibold absolute top-0 right-0 mr-8 text-gray-600">La clave privada fue enviada al correo</p>
+                        </label>
                     </form>
                     {error &&
                         <p className="text-red-500 font-semibold text-md text-center">La cédula o la clave es erronea</p>
@@ -530,7 +546,7 @@ function DeleteReservation() {
 
                 <div className="container-btns-delete flex justify-center w-full mt-5 px-20 flex-nowrap gap-4">
                     <button
-                    onClick={handleAlert}
+                        onClick={handleAlert}
                         className="w-[140px] border-2 border-black bg-gray-300 px-4 py-1.5 cursor-pointer rounded-lg hover:bg-red-700/80 duration-200 ease-in-out hover:scale-105 font-semibold text-xl text-nowrap"
                     >Sí, eliminar</button>
 
