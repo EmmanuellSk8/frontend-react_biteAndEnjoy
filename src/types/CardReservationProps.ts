@@ -3,7 +3,7 @@ export type CardReservationProps = {
     name: string;
     email: string;
     cedula: string;
-    telefono: string;
-    Npersonas: string;
-    fecha: string;
+    phoneNumber: string;
+    quantityPeople: string | '';
+    date: string;
 };

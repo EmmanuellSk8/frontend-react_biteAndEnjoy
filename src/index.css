@@ -225,6 +225,10 @@ input:focus {
   position: relative;
 }
 
+input:disabled{
+  color: rgb(105, 105, 105);
+}
+
 @keyframes Hero {
   from {
     opacity: 0;

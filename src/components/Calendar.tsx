@@ -5,9 +5,9 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { MobileDateTimePicker } from '@mui/x-date-pickers/MobileDateTimePicker';
 import "dayjs/locale/es";
 import { esES } from '@mui/x-date-pickers/locales';
+import { CalendarProps } from '../types/CalendarProps';
 
-export default function Calendar() {
-    const [value, setValue] = React.useState(null);
+export default function Calendar ({value, onChange}: CalendarProps) {
 
     const fecha = new Date();
     const mes = fecha.getMonth();
@@ -22,19 +22,19 @@ export default function Calendar() {
             dateAdapter={AdapterDayjs}
             adapterLocale="es"
             localeText={esES.components.MuiLocalizationProvider.defaultProps.localeText}
+            
         >
 
             <MobileDateTimePicker
                 ampm={true}
                 label="Selecciona una fecha 📆"
                 value={value}
-                onChange={setValue}
+                onChange={onChange}
                 minDate={minDate}
                 maxDate={maxDate}
                 minTime={minTime}
                 maxTime={maxTime}
                 minutesStep={0}
-                localeText={"es"}
                 className='bg-white hidden'
             />
         </LocalizationProvider>
