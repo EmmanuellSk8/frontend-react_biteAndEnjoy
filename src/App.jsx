@@ -1,20 +1,21 @@
-import React from 'react';
-import './index.css';
-import HeroDev from './components/HeroDev';
-
-
+import { Navigate } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
+import PageNotFound from './pages/PageNotFound';
+import HomePage from './pages/Homepage';
+import ContainerReservation from './components/Reservations';
 
 function App() {
 
   return (
 
     <section className='w-full justify-center items-center flex flex-col'>
-
-      <HeroDev />
-
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home/*" element={<HomePage />} />
+        <Route path="/Reservations/*" element={<ContainerReservation />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
     </section>
-
-
   );
 }
 
