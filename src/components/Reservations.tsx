@@ -9,6 +9,7 @@ import dayjs, { Dayjs } from "dayjs";
 import Calendar from "./Calendar";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+console.log("backend-url", BACKEND_URL)
 const CardReservation = ({ name, email, cedula, phoneNumber, quantityPeople, date }: CardReservationProps) => {
     return (
         <div className="bg-white border-1 border-gray-400 p-6 rounded-xl max-lg:w-full">
