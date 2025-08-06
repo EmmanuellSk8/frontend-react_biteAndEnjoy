@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 import dayjs, { Dayjs } from "dayjs";
 import Calendar from "./Calendar";
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const CardReservation = ({ name, email, cedula, phoneNumber, quantityPeople, date }: CardReservationProps) => {
     return (
         <div className="bg-white border-1 border-gray-400 p-6 rounded-xl max-lg:w-full">
@@ -72,7 +73,7 @@ function GetReservation() {
         }
 
         try {
-            const response = await fetch(`http://localhost:3000/api/get/cedula/${cedula}`, {
+            const response = await fetch(`${BACKEND_URL}/api/get/cedula/${cedula}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });
@@ -265,7 +266,7 @@ function CreateReservation() {
     const Create = async () => {
         setValidationLoading(true);
         try {
-            const response = await fetch('http://localhost:3000/api/create', {
+            const response = await fetch(`${BACKEND_URL}/api/create`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(form)
@@ -498,7 +499,7 @@ function UpdateReservation() {
         setError(false);
 
         try {
-            const response = await fetch(`http://localhost:3000/api/get/cedula/${cedula}`);
+            const response = await fetch(`${BACKEND_URL}/api/get/cedula/${cedula}`);
             if (!response.ok) {
                 console.log("Algo falló en el fetch: ", response.status, response.statusText);
                 setError(true);
@@ -571,7 +572,7 @@ function UpdateReservation() {
                 date: form.date
             };
 
-            const response = await fetch(`http://localhost:3000/api/update/${form.id}`, {
+            const response = await fetch(`${BACKEND_URL}/api/update/${form.id}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(updateData)
@@ -846,7 +847,7 @@ function DeleteReservation() {
         setValidationLoading(true);
         setError(false);
         try {
-            const response = await fetch(`http://localhost:3000/api/get/cedula/${cedula}`);
+            const response = await fetch(`${BACKEND_URL}/api/get/cedula/${cedula}`);
             if (!response.ok) {
                 console.log("Algo falló en el fetch: ", response.status, response.statusText);
                 setError(true);
@@ -902,7 +903,7 @@ function DeleteReservation() {
 
     const deleteReservation = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/api/delete/${form.id}`, {
+            const response = await fetch(`${BACKEND_URL}/api/delete/${form.id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
             });
